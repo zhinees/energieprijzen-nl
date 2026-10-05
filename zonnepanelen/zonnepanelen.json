@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/zonnepanelen-config.schema.json",
+  "$comment": "Aanschafprijs van zonnepanelen per Wp, met de hand overgenomen uit openbare overzichten. Bandbreedte, geen offertes. Controleren in januari en juli. `npm run zonnepanelen` schrijft data/zonnepanelen.json.",
+  "gecontroleerdOp": "2026-10-05",
+  "omschrijving": "Aanschafprijs van zonnepanelen op een woning per wattpiek (Wp), compleet: panelen, omvormer, montage en installatie. Op een woning geldt 0% btw. Duurder per Wp bij een klein aantal panelen, een plat of lastig dak of een aanpassing in de meterkast.",
+  "prijsPerWp": {
+    "richtwaarde": 0.9,
+    "van": 0.6,
+    "tot": 1.0
+  },
+  "bronnen": [
+    {
+      "url": "https://www.milieucentraal.nl/energie-besparen/zonnepanelen/kosten-en-opbrengst-zonnepanelen/",
+      "datum": "2026-10-05",
+      "notitie": "6 × 435 Wp € 2.500 (€ 0,96 per Wp), 8 × 435 Wp € 3.200 (€ 0,92), 10 × 435 Wp € 3.800 (€ 0,87), incl. installatie; 0% btw. Laatst gewijzigd 10-09-2026."
+    },
+    {
+      "url": "https://zonnepanelenkenner.nl/kosten",
+      "datum": "2026-10-05",
+      "notitie": "€ 0,87–0,96 per Wp all-in (naar Milieu Centraal); bijgewerkt 29-08-2026."
+    },
+    {
+      "url": "https://www.bohmenergy.nl/blog/wat-kosten-zonnepanelen-in-2026",
+      "datum": "2026-10-05",
+      "notitie": "Vanaf € 3.000 voor 10 × 515 Wp met micro-omvormers en montage (ca. € 0,58 per Wp); geen vaste prijs voor elk dak."
+    }
+  ]
+}

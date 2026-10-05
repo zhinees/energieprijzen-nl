@@ -16,6 +16,8 @@
     "netbeheer:postcodes": "node src/netbeheer.ts --postcodes",
     "thuisbatterijen": "node src/thuisbatterijen.ts",
     "laden": "node src/laden.ts",
+    "prijsstijging": "node src/prijsstijging.ts",
+    "zonnepanelen": "node src/zonnepanelen.ts",
     "vast": "node src/vast.ts",
     "vaste-contracten": "node src/vaste-contracten.ts",
     "afleiden": "node src/afleiden.ts",
