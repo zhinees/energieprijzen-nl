@@ -177,3 +177,37 @@ export function eerdereTarieven(eerder: NonNullable<LeverancierConfig["eerder"]>
   }
   return uit;
 }
+
+/** A logged change of a published value (data/tariefwijzigingen.json). */
+export interface Tariefwijziging {
+  datum: string;
+  leverancier: string;
+  veld: Veld;
+  vanInclBtw: number | null;
+  naarInclBtw: number | null;
+}
+
+/**
+ * Past tariffs from the change log, added after the hand-kept ones: each change from one value to another keeps the old
+ * value, valid until the day the scraper saw the change (a few days late at most: it runs every Monday and on the 1st
+ * and 2nd). Changes up to the newest hand-kept `tot` of a field are already covered by that entry and skipped.
+ */
+export function metAutomatischEerder(l: Leverancier, wijzigingen: Tariefwijziging[]): Leverancier {
+  const eerder: NonNullable<Leverancier["eerder"]> = { ...(l.eerder ?? {}) };
+  for (const veld of VELDEN) {
+    const hand = eerder[veld] ?? [];
+    const vanaf = hand.reduce((m, e) => (e.tot > m ? e.tot : m), "");
+    const auto = wijzigingen
+      .filter((w) => w.leverancier === l.id && w.veld === veld && w.vanInclBtw !== null && w.naarInclBtw !== null && w.datum > vanaf)
+      .sort((a, b) => (a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : 0))
+      .map((w) => ({
+        tot: w.datum,
+        bedragInclBtw: r6(w.vanInclBtw!),
+        bedragExclBtw: exclBtw(w.vanInclBtw!),
+        bronUrl: l.tariefUrl,
+        notitie: `Automatisch: de ophaalronde van ${w.datum} zag ${w.naarInclBtw} (incl. btw); dit was de waarde daarvoor.`,
+      }));
+    if (auto.length) eerder[veld] = [...hand, ...auto];
+  }
+  return Object.keys(eerder).length ? { ...l, eerder } : l;
+}

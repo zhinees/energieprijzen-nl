@@ -66,3 +66,13 @@ test("tarieven: alle netbeheerders en categorieën, 21% btw, oplopend met de aan
   fout.netbeheerders[0].tarieven.tm3x25.bedragExclBtw = 400;
   assert.throws(() => bouwNetbeheer(fout, ""), /21%/);
 });
+
+test("tarieven: eerdere jaren worden gepubliceerd en moeten op volgorde staan", () => {
+  const met = structuredClone(cfg);
+  const n = met.netbeheerders[0];
+  const t = structuredClone(n.tarieven);
+  n.eerder = [{ geldigVanaf: "2025-01-01", tot: n.geldigVanaf, tarieven: t, bron: n.bron }];
+  assert.deepEqual(bouwNetbeheer(met, "").netbeheerders[0].eerder?.[0].geldigVanaf, "2025-01-01");
+  n.eerder[0].tot = "2099-01-01";
+  assert.throws(() => bouwNetbeheer(met, ""), /volgorde/);
+});

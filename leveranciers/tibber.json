@@ -119,17 +119,35 @@
         "inclBtw": true,
         "gecontroleerdOp": "2026-10-05",
         "bron": "https://doe-duurzaam.nl/dossier/dynamische-energietarieven/energieleverancier-tibber/",
-        "notitie": "€ 5,99 per maand volgens Doe Duurzaam (bijgewerkt 5 augustus 2025). Tibber zelf: € 6,99 per maand, 'of voor contracten gesloten vóór 1 september 2026 het vaste bedrag genoemd in je contract' (https://support.tibber.com/nl/articles/6594101-je-stroom-en-gasrekening-bij-tibber)."
+        "notitie": "€ 5,99 per maand volgens Doe Duurzaam (bijgewerkt 5 augustus 2025). Tibber zelf: € 6,99 per maand, 'of voor contracten gesloten vóór 1 september 2026 het vaste bedrag genoemd in je contract' (https://support.tibber.com/nl/articles/6594101-je-stroom-en-gasrekening-bij-tibber). Bevestigd door de facturen van een klant over 2025: 'Vaste leveringskosten … € 4,95/maand' (excl. btw = € 5,99 incl.)."
       }
     ],
     "terugleverCorrectie": [
       {
-        "tot": "2026-09-01",
+        "tot": "2026-01-01",
         "waarde": 0,
         "inclBtw": true,
         "gecontroleerdOp": "2026-10-05",
-        "bron": "https://support.tibber.com/nl/articles/5605892-de-kosten-bij-tibber",
-        "notitie": "Tibber: 'Per 1 september 2026 rekenen we €0,0180 verkoopvergoeding per teruggeleverde kWh'; daarvoor kreeg je bij teruglevering dezelfde uurprijs terug als bij afname (Doe Duurzaam, 5 augustus 2025)."
+        "bron": "https://www.energieprijzengids.nl/info/tibber-schrapt-inkoopvergoeding-bij-teruglevering-stroom-per-2026/",
+        "notitie": "In 2025 kreeg je voor teruglevering de uurprijs plus de inkoopvergoeding terug (facturen van een klant over 2025: productie tegen de gewogen uurprijs incl. de 2,05 ct excl. btw); vanaf 1 januari 2026 niet meer. In het model: correctie 0 en de saldering geeft de opslag terug."
+      },
+      {
+        "tot": "2026-09-01",
+        "waarde": -0.0248,
+        "inclBtw": true,
+        "gecontroleerdOp": "2026-10-05",
+        "bron": "https://www.energieprijzengids.nl/info/tibber-schrapt-inkoopvergoeding-bij-teruglevering-stroom-per-2026/",
+        "notitie": "'Tibber vanaf 1 januari 2026 een verkoopvergoeding van €0,0248 per kWh rekent bij teruglevering' (energieprijzengids, 12-12-2025); per 1 september 2026 € 0,018 (https://support.tibber.com/nl/articles/5605892-de-kosten-bij-tibber)."
+      }
+    ],
+    "stroomInkoopopslag": [
+      {
+        "tot": "2026-09-01",
+        "waarde": 0.0248,
+        "inclBtw": true,
+        "gecontroleerdOp": "2026-10-05",
+        "bron": "https://www.energieprijzengids.nl/info/tibber-schrapt-inkoopvergoeding-bij-teruglevering-stroom-per-2026/",
+        "notitie": "'Die vergoeding lag op ongeveer €0,0248 per kWh inclusief btw' (energieprijzengids, 12-12-2025). Bevestigd door de facturen van een klant over heel 2025: '2,05 cent (€0,0205) per kWh voor Garanties van Oorsprong en onbalanskosten' (excl. btw). Datum van de verlaging naar € 0,018 niet gevonden; aangenomen gelijk aan de nieuwe verkoopvergoeding per 1 september 2026."
       }
     ]
   }
