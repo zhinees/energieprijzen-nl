@@ -8,6 +8,8 @@ Een onafhankelijk, open overzicht van wat Nederlandse leveranciers rekenen voor 
 - **Vaste contracten van leveranciers**: het modelcontract met vast tarief per leverancier (leveringstarief per kWh, vaste kosten, terugleververgoeding en terugleverkosten, ook als staffel), met bron per getal. Bewust het modelcontract, dat elke leverancier moet publiceren, en geen actieprijzen, welkomstbonussen of cashback: zo is het eerlijk en controleerbaar te vergelijken. Nog niet alle leveranciers; de lijst wordt aangevuld.
 - **Gemiddeld vast contract**: wat een huishouden gemiddeld betaalt met een vast of variabel stroomcontract (per kWh en vaste leveringskosten, CBS), als standaard voor wie het eigen tarief niet weet.
 - **Thuis laden**: de ERE-vergoeding per thuis geladen kWh (richtwaarde en bandbreedte) en de aanschafprijs van een laadpaal, om te schatten wat een laadpaal oplevert.
+- **Zonnepanelen**: de aanschafprijs per wattpiek (bandbreedte, compleet met installatie), om een terugverdientijd te kunnen schatten.
+- **Prijsstijging**: de verwachte verandering per jaar van de marktprijs van stroom, uit de ramingen van PBL en CPB, als standaard voor wie uurprijzen van het afgelopen jaar doortrekt.
 - **Batterijmodellen**: technische gegevens van veelverkochte thuisbatterijen (capaciteit, bruikbare capaciteit, laad- en ontlaadvermogen, verlies, stand-by), met bronnen, om met een echt model te kunnen rekenen.
 - **Omslagpunten en een rekenhulp**: vanaf welk jaarverbruik de inkoopopslag zwaarder weegt dan de vaste kosten, en welke leverancier bij jouw verbruik het goedkoopst is. Bij elke tariefwijziging opnieuw berekend.
 
@@ -37,6 +39,8 @@ Een CDN-alternatief is `https://cdn.jsdelivr.net/gh/zhinees/energieprijzen-nl@ma
 | `data/netbeheer-postcodes.json` | Netbeheerder stroom per postcode (per viercijferig gebied, met uitzonderingen op zes posities) | jaarlijks, januari |
 | `data/thuisbatterijen.json` | Aanschafprijs van thuisbatterijen (vast met installatie, en stekkerbatterij) per capaciteit, als bandbreedte incl. btw, met de prijs per kWh, levensduur en bronnen | met de hand, januari en juli |
 | `data/laden.json` | Thuis laden: ERE-vergoeding per thuis geladen kWh (richtwaarde en bandbreedte, na de kosten van de inboeker) en de prijs van een laadpaal met installatie, incl. btw, met bronnen | met de hand, januari en juli |
+| `data/zonnepanelen.json` | Aanschafprijs van zonnepanelen op een woning per Wp (richtwaarde en bandbreedte), compleet met omvormer, montage en installatie, 0% btw, met bronnen | met de hand, januari en juli |
+| `data/prijsstijging.json` | Standaard prijsstijging per jaar van de marktprijs van stroom (`standaard.procentPerJaar`): eerst PBL (verwachte groothandelsprijs uit de KEV, plus de inflatie van CPB naar lopende prijzen), anders de inflatie van CPB, anders 10%; met de ramingen en bronnen | met de hand, september/oktober (KEV en MEV) |
 | `data/vast.json` | Gemiddeld vast of variabel stroomcontract voor huishoudens: leveringstarief per kWh, energiebelasting, totaal per kWh en vaste leveringskosten, incl. btw, per maand (laatste twaalf maanden) | wekelijks (CBS publiceert maandelijks) |
 | `data/vaste-contracten.json` | Modelcontract met vast tarief per leverancier: leveringstarief per kWh zonder energiebelasting, vaste leveringskosten, terugleververgoeding en terugleverkosten per kWh of als staffel (bedrag per maand per band van de teruglevering per jaar), incl. en excl. btw, met bron en controledatum per waarde. Geen acties of bonussen; nog niet alle leveranciers | met de hand, bij tariefwijzigingen (meestal 1 januari en 1 juli) |
 | `data/batterijmodellen.json` | Technische gegevens van thuisbatterijen per model (capaciteit, bruikbaar, laad- en ontlaadvermogen, verlies, stand-by), met bronnen; onbekend = null | met de hand, januari en juli |
@@ -130,6 +134,8 @@ Je krijgt een ranglijst van leveranciers voor jouw verbruik, waar je zit ten opz
 - **Gemiddeld vast contract**: automatisch uit [CBS StatLine 85592NED](https://opendata.cbs.nl/#/CBS/nl/dataset/85592NED/table) (Gemiddelde energietarieven voor consumenten, CC BY 4.0): het variabele leveringstarief en het vaste leveringstarief voor vaste en variabele contracten, incl. btw. Is het CBS niet bereikbaar, dan blijft het vorige bestand staan.
 - **Vaste contracten**: met de hand overgenomen in [`vaste-contracten/contracten.json`](vaste-contracten/contracten.json), alleen van de eigen site of het tariefblad van de leverancier (de controle weigert een bron op een ander domein), met per waarde de URL en de datum. Het leveringstarief zonder energiebelasting, zodat je zelf de belasting van het juiste jaar optelt. We nemen het modelcontract met vast tarief, niet de actieprijzen of welkomstbonussen waar vergelijkingssites mee werken. Controleren bij elke tariefwijziging.
 - **Thuis laden**: met de hand overgenomen in [`laden/laden.json`](laden/laden.json), met per waarde de bronnen en de datum. De ERE-vergoeding (emissiereductie-eenheden) krijgt de bezitter van een laadpaal met geijkte MID-meter via een inboeker; de prijs wisselt met de markt. De laadpaalprijs is incl. installatie; Milieu Centraal staat als onafhankelijke controlebron. Controleren in januari en juli.
+- **Zonnepanelen**: met de hand overgenomen in [`zonnepanelen/zonnepanelen.json`](zonnepanelen/zonnepanelen.json), prijs per Wp met bronnen (Milieu Centraal als ijkpunt). Controleren in januari en juli.
+- **Prijsstijging**: met de hand overgenomen in [`prijsstijging/prijsstijging.json`](prijsstijging/prijsstijging.json): de groothandelsprijs van stroom uit de Klimaat- en Energieverkenning (PBL, in vaste prijzen) en de inflatie uit de Macro Economische Verkenning (CPB). De standaard is de jaarlijkse verandering van de groothandelsprijs, omgerekend naar lopende prijzen met de inflatie; zonder PBL alleen de inflatie, zonder beide 10%. Controleren als de nieuwe KEV en MEV verschijnen (september).
 - **Batterijmodellen**: met de hand overgenomen in [`thuisbatterijen/modellen.json`](thuisbatterijen/modellen.json), met per model de bronnen en per bron het soort (fabrikant, datasheet, verkoper, review). Liefst de datasheet van de fabrikant. Wat een bron niet noemt of wat bronnen verschillend noemen, blijft `null`. Het rondeverlies is laden en weer ontladen samen, inclusief omvormer; een piekrendement van alleen de batterij hoort daar niet. `vermogenKw` is het laagste van laad- en ontlaadvermogen, voor rekenhulpen die die twee niet apart kennen. Controleren in januari en juli.
 - **Marktprijzen** (alleen in de rekenhulp en het voorbeeld, niet opgeslagen): de openbare API van EnergyZero.
 
@@ -143,6 +149,8 @@ npm run belasting                        # energiebelasting → data/energiebela
 npm run netbeheer                        # netbeheer/netbeheerders.json → data/netbeheer.json
 npm run netbeheer:postcodes              # ook data/netbeheer-postcodes.json (januari; downloadt ± 40 MB, vraagt PDOK ± 3.000 keer)
 npm run laden                            # laden/laden.json → data/laden.json
+npm run zonnepanelen                     # zonnepanelen/zonnepanelen.json → data/zonnepanelen.json
+npm run prijsstijging                    # prijsstijging/prijsstijging.json → data/prijsstijging.json
 npm run vaste-contracten                 # vaste-contracten/contracten.json → data/vaste-contracten.json
 npm run thuisbatterijen                  # thuisbatterijen/thuisbatterijen.json → data/thuisbatterijen.json, modellen.json → data/batterijmodellen.json
 npm run leveranciers                     # tarieven uitlezen → data/leveranciers.json
@@ -172,6 +180,6 @@ De nuttigste hulp is de huidige tarieven van een leverancier controleren en het 
 ## Licentie
 
 - Code: [MIT](LICENSE).
-- Data in `data/`, `leveranciers/`, `belastingen/`, `netbeheer/`, `thuisbatterijen/`, `laden/` en `vaste-contracten/`: [CC BY 4.0](DATA-LICENTIE.md). Vermeld "energieprijzen-nl" en de onderliggende bronnen die daar staan.
+- Data in `data/`, `leveranciers/`, `belastingen/`, `netbeheer/`, `thuisbatterijen/`, `laden/`, `zonnepanelen/`, `prijsstijging/` en `vaste-contracten/`: [CC BY 4.0](DATA-LICENTIE.md). Vermeld "energieprijzen-nl" en de onderliggende bronnen die daar staan.
 
 Dit project is niet verbonden aan een energieleverancier, en niets hier is financieel advies. Controleer altijd de voorwaarden van de leverancier zelf voordat je overstapt.

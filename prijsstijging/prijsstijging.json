@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/prijsstijging-config.schema.json",
+  "$comment": "Standaard voor de prijsstijging per jaar van de marktprijs van stroom, met de hand overgenomen uit PBL (KEV) en CPB (MEV). Controleren in september/oktober (KEV en MEV verschijnen dan). `npm run prijsstijging` schrijft data/prijsstijging.json.",
+  "gecontroleerdOp": "2026-10-05",
+  "omschrijving": "Verwachte verandering per jaar van de groothandelsprijs (marktprijs, day-ahead) van stroom, als standaard voor rekenhulpen die de uurprijzen van het afgelopen jaar doortrekken naar een volgend jaar. Geldt voor de marktprijs, niet voor vaste tarieven, netbeheer of energiebelasting.",
+  "volgorde": "Eerst PBL (verwachte groothandelsprijs, in vaste prijzen, plus de inflatie van CPB om naar lopende prijzen te gaan); zonder PBL de inflatie van CPB; zonder beide 10% per jaar.",
+  "pbl": {
+    "publicatie": "Klimaat- en Energieverkenning 2025",
+    "tabel": "Tabel 1.5 Economische groei, energie- en CO2-prijzen (basispad)",
+    "url": "https://www.pbl.nl/system/files/document/2025-09/pbl-2025-klimaat-en-energieverkenning-2025-5692.pdf",
+    "datum": "2026-10-05",
+    "prijspeil": 2024,
+    "groothandelsprijsPerMWh": {
+      "vanJaar": 2024,
+      "van": 77,
+      "naarJaar": 2030,
+      "naar": 73
+    },
+    "bandbreedteNaar": {
+      "van": 48,
+      "tot": 105
+    },
+    "notitie": "2024 voorlopige gegevens; prijzen in prijspeil 2024 (zonder inflatie)."
+  },
+  "cpb": {
+    "publicatie": "Macro Economische Verkenning 2027 (septemberraming 2026)",
+    "url": "https://www.cpb.nl/en/forecast/september-projection-2026-mev-2027",
+    "datum": "2026-10-05",
+    "inflatieCpi": {
+      "2026": 3.3,
+      "2027": 2.7
+    },
+    "notitie": "CPI-inflatie in procenten per jaar; voor de omrekening naar lopende prijzen geldt het laatste jaar."
+  },
+  "terugvalProcentPerJaar": 10
+}

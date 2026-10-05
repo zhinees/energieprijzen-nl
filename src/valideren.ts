@@ -90,6 +90,14 @@ await controleer("laden-config.schema.json", ladenCfg);
 const laden = await leesJson<{ gecontroleerdOp: string }>(ladenCfg);
 if (laden && laden.gecontroleerdOp > new Date().toISOString().slice(0, 10)) fout("laden/laden.json", "gecontroleerdOp ligt in de toekomst");
 
+// 4b2. Price increase (PBL, CPB) and solar panel prices
+for (const n of ["prijsstijging", "zonnepanelen"]) {
+  const pad = join(ROOT, n, `${n}.json`);
+  await controleer(`${n}-config.schema.json`, pad);
+  const c = await leesJson<{ gecontroleerdOp: string }>(pad);
+  if (c && c.gecontroleerdOp > new Date().toISOString().slice(0, 10)) fout(`${n}/${n}.json`, "gecontroleerdOp ligt in de toekomst");
+}
+
 // 4c. Fixed contracts of suppliers
 const vasteCfg = join(ROOT, "vaste-contracten", "contracten.json");
 await controleer("vaste-contracten-config.schema.json", vasteCfg);
@@ -112,6 +120,8 @@ await controleer("netbeheer-postcodes.schema.json", join(DATA, "netbeheer-postco
 await controleer("thuisbatterijen.schema.json", join(DATA, "thuisbatterijen.json"));
 await controleer("batterijmodellen.schema.json", join(DATA, "batterijmodellen.json"));
 await controleer("laden.schema.json", join(DATA, "laden.json"));
+await controleer("prijsstijging.schema.json", join(DATA, "prijsstijging.json"));
+await controleer("zonnepanelen.schema.json", join(DATA, "zonnepanelen.json"));
 await controleer("vast.schema.json", join(DATA, "vast.json"));
 await controleer("vaste-contracten.schema.json", join(DATA, "vaste-contracten.json"));
 
@@ -119,4 +129,4 @@ if (fouten) {
   console.error(`\n${fouten} probleem/problemen`);
   process.exit(1);
 }
-console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, de batterijmodellen, thuis laden, het gemiddelde vaste contract, de vaste contracten en de databestanden zijn geldig`);
+console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, de batterijmodellen, thuis laden, de prijsstijging, de prijs van zonnepanelen, het gemiddelde vaste contract, de vaste contracten en de databestanden zijn geldig`);
