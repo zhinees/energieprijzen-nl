@@ -89,3 +89,27 @@ test("rekentool: alleen een waarschuwing als de run faalde of een eerder gelever
   const weg = bouwLeverancier(anwb, new Map(), eerste, "2026-09-27T05:00:00Z", [], { gasVastPerMaand: { waarde: 9.75, inclBtw: true } });
   assert.equal(weg.tarieven.stroomVastPerMaand?.laatsteFout, "rekentool gaf geen waarde");
 });
+
+test("eerder: tarieven van vóór de huidige, oudste eerst, incl. en excl. btw", () => {
+  const rec = bouwLeverancier(
+    {
+      ...cfg,
+      eerder: {
+        terugleverCorrectie: [
+          { tot: "2026-09-01", waarde: 0, inclBtw: true, gecontroleerdOp: "2026-10-05", bron: "https://x.nl/b" },
+          { tot: "2025-01-01", waarde: -0.0121, inclBtw: true, gecontroleerdOp: "2026-10-05", bron: "https://x.nl/a", notitie: "n" },
+        ],
+      },
+    },
+    pagina("0,02"),
+    undefined,
+    "2026-10-05T00:00:00.000Z",
+  );
+  assert.deepEqual(rec.eerder, {
+    terugleverCorrectie: [
+      { tot: "2025-01-01", bedragInclBtw: -0.0121, bedragExclBtw: -0.01, bronUrl: "https://x.nl/a", notitie: "n" },
+      { tot: "2026-09-01", bedragInclBtw: 0, bedragExclBtw: 0, bronUrl: "https://x.nl/b" },
+    ],
+  });
+  assert.equal(bouwLeverancier(cfg, pagina("0,02"), undefined, "2026-10-05T00:00:00.000Z").eerder, undefined);
+});

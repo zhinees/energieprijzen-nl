@@ -150,7 +150,30 @@ export function bouwLeverancier(
     producten: cfg.producten,
     kenmerken: cfg.kenmerken,
     tarieven,
+    ...(cfg.eerder ? { eerder: eerdereTarieven(cfg.eerder) } : {}),
     laatstUitgevoerd: nu,
     ...(ophaalfouten.length ? { ophaalfout: ophaalfouten.join("; ") } : {}),
   };
+}
+
+/** The config's past tariffs as published: incl. and excl. btw, oldest first. */
+export function eerdereTarieven(eerder: NonNullable<LeverancierConfig["eerder"]>): NonNullable<Leverancier["eerder"]> {
+  const uit: NonNullable<Leverancier["eerder"]> = {};
+  for (const veld of VELDEN) {
+    const lijst = eerder[veld];
+    if (!lijst?.length) continue;
+    uit[veld] = [...lijst]
+      .sort((a, b) => (a.tot < b.tot ? -1 : a.tot > b.tot ? 1 : 0))
+      .map((e) => {
+        const bedragExclBtw = e.inclBtw ? exclBtw(e.waarde) : r6(e.waarde);
+        return {
+          tot: e.tot,
+          bedragInclBtw: e.inclBtw ? r6(e.waarde) : inclBtw(bedragExclBtw),
+          bedragExclBtw,
+          bronUrl: e.bron,
+          ...(e.notitie ? { notitie: e.notitie } : {}),
+        };
+      });
+  }
+  return uit;
 }
