@@ -8,19 +8,14 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { sluitBrowser, haalPaginaTekst } from "./lib/pagina-ophalen.ts";
 import { DATA, laadLeverancierConfigs, leesJson, schrijfJsonAlsGewijzigd, schrijfTekst } from "./lib/bestanden.ts";
-import { bouwLeverancier, regelsVoor, urlsVoor } from "./lib/tarieven.ts";
+import { bouwLeverancier, metAutomatischEerder, regelsVoor, urlsVoor, type Tariefwijziging } from "./lib/tarieven.ts";
 import { REKENTOOLS, type Rekentoolresultaat } from "./rekentools/index.ts";
 import { VELDEN, type Bron, type EnergiebelastingBestand, type Leverancier, type LeverancierConfig, type LeveranciersBestand, type Veld } from "./lib/typen.ts";
 
 const LEVERANCIERS_JSON = join(DATA, "leveranciers.json");
 const WIJZIGINGEN_JSON = join(DATA, "tariefwijzigingen.json");
 
-interface Wijziging {
-  datum: string;
-  leverancier: string;
-  veld: Veld;
-  vanInclBtw: number | null;
-  naarInclBtw: number | null;
+interface Wijziging extends Tariefwijziging {
   bron: Bron;
 }
 
@@ -147,6 +142,9 @@ async function main() {
       if (a !== b) wijzigingen.push({ datum: nu.slice(0, 10), leverancier: l.id, veld: k, vanInclBtw: a, naarInclBtw: b, bron: l.tarieven[k]?.bron ?? "handmatig" });
     }
   }
+
+  // Past tariffs: every logged change keeps the old value (next to the hand-kept `eerder`), so a past year can be recalculated.
+  bestand.leveranciers = leveranciers.map((l) => metAutomatischEerder(l, wijzigingen));
 
   const geschreven = await schrijfJsonAlsGewijzigd(LEVERANCIERS_JSON, bestand);
   if (geschreven) await schrijfTekst(join(DATA, "leveranciers.csv"), naarCsv(bestand));

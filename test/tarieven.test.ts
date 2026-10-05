@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { laadLeverancierConfigs } from "../src/lib/bestanden.ts";
-import { bouwLeverancier } from "../src/lib/tarieven.ts";
+import { bouwLeverancier, metAutomatischEerder } from "../src/lib/tarieven.ts";
 import type { LeverancierConfig } from "../src/lib/typen.ts";
 
 const cfg: LeverancierConfig = {
@@ -112,4 +112,27 @@ test("eerder: tarieven van vóór de huidige, oudste eerst, incl. en excl. btw",
     ],
   });
   assert.equal(bouwLeverancier(cfg, pagina("0,02"), undefined, "2026-10-05T00:00:00.000Z").eerder, undefined);
+});
+
+test("eerder: elke gelogde wijziging bewaart de oude waarde, na de met de hand bijgehouden", () => {
+  const rec = bouwLeverancier(
+    { ...cfg, eerder: { stroomInkoopopslag: [{ tot: "2026-01-01", waarde: 0.01, inclBtw: false, gecontroleerdOp: "2026-10-05", bron: "https://x.nl/a" }] } },
+    pagina("0,02"),
+    undefined,
+    "2026-10-05T00:00:00.000Z",
+  );
+  const w = (datum: string, veld: "stroomInkoopopslag" | "gasInkoopopslag", van: number | null, naar: number | null, leverancier = "x") =>
+    ({ datum, leverancier, veld, vanInclBtw: van, naarInclBtw: naar });
+  const uit = metAutomatischEerder(rec, [
+    w("2025-12-01", "stroomInkoopopslag", 0.0121, 0.0242), // al gedekt door de handmatige tot 2026-01-01
+    w("2026-10-01", "stroomInkoopopslag", 0.0242, 0.03),
+    w("2026-09-26", "gasInkoopopslag", null, 0.1), // eerste waarde: niets ervoor
+    w("2026-09-01", "gasInkoopopslag", 0.121, 0.1, "y"), // andere leverancier
+    w("2026-10-02", "gasInkoopopslag", 0.1, 0.11),
+  ]);
+  assert.deepEqual(uit.eerder?.stroomInkoopopslag?.map((e) => [e.tot, e.bedragInclBtw]), [["2026-01-01", 0.0121], ["2026-10-01", 0.0242]]);
+  assert.deepEqual(uit.eerder?.gasInkoopopslag, [
+    { tot: "2026-10-02", bedragInclBtw: 0.1, bedragExclBtw: 0.082645, bronUrl: "https://x.nl/t", notitie: "Automatisch: de ophaalronde van 2026-10-02 zag 0.11 (incl. btw); dit was de waarde daarvoor." },
+  ]);
+  assert.equal(metAutomatischEerder({ ...rec, eerder: undefined }, []).eerder, undefined);
 });

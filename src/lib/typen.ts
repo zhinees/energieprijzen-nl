@@ -165,7 +165,7 @@ export interface Leverancier {
   producten: LeverancierConfig["producten"];
   kenmerken: LeverancierConfig["kenmerken"];
   tarieven: Partial<Record<Veld, Tariefwaarde>>;
-  /** Tariffs before the current ones, oldest first (from the config's `eerder`). */
+  /** Tariffs before the current ones, oldest first: the config's `eerder`, then the logged changes after it. */
   eerder?: Partial<Record<Veld, EerdereTariefwaarde[]>>;
   laatstUitgevoerd: string;
   ophaalfout?: string;
