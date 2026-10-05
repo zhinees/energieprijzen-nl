@@ -108,6 +108,16 @@
             "3x35": { "bedragExclBtw": 1254.02, "bedragInclBtw": 1517.37 }
           },
           "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2024/12/Tarievenblad_nettarieven_elektriciteit_KV_2025_versie_1.0_internet.pdf"
+        },
+        {
+          "geldigVanaf": "2026-01-01",
+          "tot": "2026-07-01",
+          "tarieven": {
+            "tm1x10": { "bedragExclBtw": 133.345, "bedragInclBtw": 161.35 },
+            "tm3x25": { "bedragExclBtw": 367.74, "bedragInclBtw": 444.96 },
+            "3x35": { "bedragExclBtw": 1469.01, "bedragInclBtw": 1777.5 }
+          },
+          "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2025/12/Tarievenblad_nettarieven_elektriciteit_KV_2026_versie_1.0_internet.pdf"
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-10-05T20:43:34.126Z",
+  "gegenereerdOp": "2026-10-05T22:25:03.870Z",
   "categorieen": {
     "tm1x10": "t/m 1x10A",
     "tm3x25": "> 1x10A t/m 3x25A (ook 1x25A, 1x35A en 1x40A)",
@@ -172,6 +172,25 @@
             }
           },
           "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2024/12/Tarievenblad_nettarieven_elektriciteit_KV_2025_versie_1.0_internet.pdf"
+        },
+        {
+          "geldigVanaf": "2026-01-01",
+          "tot": "2026-07-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 133.345,
+              "bedragInclBtw": 161.35
+            },
+            "tm3x25": {
+              "bedragExclBtw": 367.74,
+              "bedragInclBtw": 444.96
+            },
+            "3x35": {
+              "bedragExclBtw": 1469.01,
+              "bedragInclBtw": 1777.5
+            }
+          },
+          "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2025/12/Tarievenblad_nettarieven_elektriciteit_KV_2026_versie_1.0_internet.pdf"
         }
       ]
     },
