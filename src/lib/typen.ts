@@ -79,6 +79,28 @@ export interface LeverancierConfig {
   regels: Partial<Record<Veld, Regel | Regel[]>>;
   /** Hand-checked values, used when scraping fails or no rule exists. One entry per field. */
   handmatig: Partial<Record<Veld, HandmatigeWaarde>>;
+  /** Tariffs before the current ones, oldest first; each is valid until (not including) `tot`. For recalculating a past year. */
+  eerder?: Partial<Record<Veld, EerdereWaarde[]>>;
+}
+
+export interface EerdereWaarde {
+  /** First day this value no longer applied (YYYY-MM-DD). */
+  tot: string;
+  waarde: number;
+  inclBtw: boolean;
+  gecontroleerdOp: string; // YYYY-MM-DD
+  /** URL where it was read; preferably the supplier's own site, another source only with a notitie. */
+  bron: string;
+  notitie?: string;
+}
+
+/** A past tariff in the output, valid until (not including) `tot`. */
+export interface EerdereTariefwaarde {
+  tot: string;
+  bedragInclBtw: number;
+  bedragExclBtw: number;
+  bronUrl: string;
+  notitie?: string;
 }
 
 export interface Bewaking {
@@ -143,6 +165,8 @@ export interface Leverancier {
   producten: LeverancierConfig["producten"];
   kenmerken: LeverancierConfig["kenmerken"];
   tarieven: Partial<Record<Veld, Tariefwaarde>>;
+  /** Tariffs before the current ones, oldest first (from the config's `eerder`). */
+  eerder?: Partial<Record<Veld, EerdereTariefwaarde[]>>;
   laatstUitgevoerd: string;
   ophaalfout?: string;
 }

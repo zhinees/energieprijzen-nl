@@ -84,6 +84,7 @@ Elk bestand heeft een JSON Schema in [`schema/`](schema) en een veld `$schema` d
   - `geverifieerd`: altijd `true`. Ongecontroleerde waarden worden door de validator geweigerd.
   - `sinds`: sinds wanneer deze waarde geldt.
   - `laatstGecontroleerd`: de laatste bevestiging door de bot.
+- **Eerdere tarieven** (`eerder`, optioneel, per leverancier): per veld de tarieven van vóór de huidige, oudste eerst, elk met `tot` (de eerste dag dat het niet meer gold), `bedragInclBtw`, `bedragExclBtw` en `bronUrl`. Zo kan een rekenhulp een afgelopen jaar narekenen met de tarieven van toen. Met de hand bijgehouden in het leveranciersbestand (`eerder`), liefst met een bron op de eigen site van de leverancier; een andere bron alleen met een notitie.
 - **Energiebelasting** (`data/energiebelasting.json`, per jaar): `stroomPerKwh` (0 t/m 10.000 kWh), `gasPerM3` (0 t/m 170.000 m³) en `verminderingPerAansluitingPerJaar` (de belastingvermindering per stroomaansluiting van een woning), elk met `bedragInclBtw` en `bedragExclBtw`. De vermindering is een vast bedrag per jaar en hoort niet bij de prijs per kWh. Jaren vóór 2023 staan er niet in, omdat de ODE toen nog een aparte heffing was.
 - **Afronding**: bedragen zijn afgerond op 6 decimalen.
 

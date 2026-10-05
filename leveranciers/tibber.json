@@ -110,5 +110,27 @@
       "bron": "https://tibber.com/nl/energiecontract",
       "notitie": "Verkoopvergoeding, vermeld incl. btw."
     }
+  },
+  "eerder": {
+    "stroomVastPerMaand": [
+      {
+        "tot": "2026-09-01",
+        "waarde": 5.99,
+        "inclBtw": true,
+        "gecontroleerdOp": "2026-10-05",
+        "bron": "https://doe-duurzaam.nl/dossier/dynamische-energietarieven/energieleverancier-tibber/",
+        "notitie": "€ 5,99 per maand volgens Doe Duurzaam (bijgewerkt 5 augustus 2025). Tibber zelf: € 6,99 per maand, 'of voor contracten gesloten vóór 1 september 2026 het vaste bedrag genoemd in je contract' (https://support.tibber.com/nl/articles/6594101-je-stroom-en-gasrekening-bij-tibber)."
+      }
+    ],
+    "terugleverCorrectie": [
+      {
+        "tot": "2026-09-01",
+        "waarde": 0,
+        "inclBtw": true,
+        "gecontroleerdOp": "2026-10-05",
+        "bron": "https://support.tibber.com/nl/articles/5605892-de-kosten-bij-tibber",
+        "notitie": "Tibber: 'Per 1 september 2026 rekenen we €0,0180 verkoopvergoeding per teruggeleverde kWh'; daarvoor kreeg je bij teruglevering dezelfde uurprijs terug als bij afname (Doe Duurzaam, 5 augustus 2025)."
+      }
+    ]
   }
 }

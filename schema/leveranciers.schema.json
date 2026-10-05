@@ -81,6 +81,158 @@
                 "$ref": "#/$defs/tariefwaarde"
               }
             }
+          },
+          "eerder": {
+            "type": "object",
+            "additionalProperties": false,
+            "description": "Tarieven van vóór de huidige, per veld, oudste eerst; elk geldt tot (niet t/m) 'tot'.",
+            "properties": {
+              "stroomVastPerMaand": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "tot",
+                    "bedragInclBtw",
+                    "bedragExclBtw",
+                    "bronUrl"
+                  ],
+                  "properties": {
+                    "tot": {
+                      "type": "string"
+                    },
+                    "bedragInclBtw": {
+                      "type": "number"
+                    },
+                    "bedragExclBtw": {
+                      "type": "number"
+                    },
+                    "bronUrl": {
+                      "type": "string"
+                    },
+                    "notitie": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "stroomInkoopopslag": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "tot",
+                    "bedragInclBtw",
+                    "bedragExclBtw",
+                    "bronUrl"
+                  ],
+                  "properties": {
+                    "tot": {
+                      "type": "string"
+                    },
+                    "bedragInclBtw": {
+                      "type": "number"
+                    },
+                    "bedragExclBtw": {
+                      "type": "number"
+                    },
+                    "bronUrl": {
+                      "type": "string"
+                    },
+                    "notitie": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "gasVastPerMaand": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "tot",
+                    "bedragInclBtw",
+                    "bedragExclBtw",
+                    "bronUrl"
+                  ],
+                  "properties": {
+                    "tot": {
+                      "type": "string"
+                    },
+                    "bedragInclBtw": {
+                      "type": "number"
+                    },
+                    "bedragExclBtw": {
+                      "type": "number"
+                    },
+                    "bronUrl": {
+                      "type": "string"
+                    },
+                    "notitie": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "gasInkoopopslag": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "tot",
+                    "bedragInclBtw",
+                    "bedragExclBtw",
+                    "bronUrl"
+                  ],
+                  "properties": {
+                    "tot": {
+                      "type": "string"
+                    },
+                    "bedragInclBtw": {
+                      "type": "number"
+                    },
+                    "bedragExclBtw": {
+                      "type": "number"
+                    },
+                    "bronUrl": {
+                      "type": "string"
+                    },
+                    "notitie": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "terugleverCorrectie": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "tot",
+                    "bedragInclBtw",
+                    "bedragExclBtw",
+                    "bronUrl"
+                  ],
+                  "properties": {
+                    "tot": {
+                      "type": "string"
+                    },
+                    "bedragInclBtw": {
+                      "type": "number"
+                    },
+                    "bedragExclBtw": {
+                      "type": "number"
+                    },
+                    "bronUrl": {
+                      "type": "string"
+                    },
+                    "notitie": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
