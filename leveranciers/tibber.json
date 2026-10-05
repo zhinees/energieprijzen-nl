@@ -125,11 +125,11 @@
     "stroomInkoopopslag": [
       {
         "tot": "2026-09-01",
-        "waarde": 0.021,
+        "waarde": 0.0248,
         "inclBtw": true,
         "gecontroleerdOp": "2026-10-05",
-        "bron": "Afrekening van een Tibber-klant (februari en oktober 2025)",
-        "notitie": "€ 0,021 per kWh incl. btw op de afrekening van een Tibber-klant, zowel in februari als in oktober 2025 (doorgegeven aan energie27, 05-10-2026). Aangenomen dat dit gold tot de tariefwijziging van 1 september 2026, zoals de andere tarieven hierboven; de exacte datum van de wijziging naar € 0,018 is niet bekend."
+        "bron": "Afrekening van een Tibber-klant (heel 2025)",
+        "notitie": "2,05 cent (€ 0,0205) per kWh excl. btw, € 0,0248 incl., op de facturen van een Tibber-klant over heel 2025 (doorgegeven aan energie27, 05-10-2026); gelijk aan de € 0,0248 incl. btw die Tibber in 2025 noemde. Aangenomen dat dit gold tot de tariefwijziging van 1 september 2026, zoals de andere tarieven hierboven; de exacte datum van de wijziging naar € 0,018 is niet bekend."
       }
     ],
     "terugleverCorrectie": [
