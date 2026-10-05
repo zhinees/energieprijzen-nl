@@ -122,6 +122,16 @@
         "notitie": "€ 5,99 per maand volgens Doe Duurzaam (bijgewerkt 5 augustus 2025). Tibber zelf: € 6,99 per maand, 'of voor contracten gesloten vóór 1 september 2026 het vaste bedrag genoemd in je contract' (https://support.tibber.com/nl/articles/6594101-je-stroom-en-gasrekening-bij-tibber). Bevestigd door de facturen van een klant over 2025: 'Vaste leveringskosten … € 4,95/maand' (excl. btw = € 5,99 incl.)."
       }
     ],
+    "stroomInkoopopslag": [
+      {
+        "tot": "2026-09-01",
+        "waarde": 0.0248,
+        "inclBtw": true,
+        "gecontroleerdOp": "2026-10-05",
+        "bron": "Afrekening van een Tibber-klant (heel 2025)",
+        "notitie": "2,05 cent (€ 0,0205) per kWh excl. btw, € 0,0248 incl., op de facturen van een Tibber-klant over heel 2025 (doorgegeven aan energie27, 05-10-2026); gelijk aan de € 0,0248 incl. btw die Tibber in 2025 noemde. Aangenomen dat dit gold tot de tariefwijziging van 1 september 2026, zoals de andere tarieven hierboven; de exacte datum van de wijziging naar € 0,018 is niet bekend."
+      }
+    ],
     "terugleverCorrectie": [
       {
         "tot": "2026-01-01",
