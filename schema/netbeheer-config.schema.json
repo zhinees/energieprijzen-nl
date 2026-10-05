@@ -117,6 +117,54 @@
                 ]
               }
             }
+          },
+          "eerder": {
+            "description": "Eerdere tarieven, oudste eerst; elk gold van geldigVanaf tot (niet meer op) tot.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "geldigVanaf",
+                "tot",
+                "tarieven",
+                "bron"
+              ],
+              "properties": {
+                "geldigVanaf": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "tot": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "tarieven": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "tm1x10",
+                    "tm3x25",
+                    "3x35"
+                  ],
+                  "properties": {
+                    "tm1x10": {
+                      "$ref": "#/$defs/bedrag"
+                    },
+                    "tm3x25": {
+                      "$ref": "#/$defs/bedrag"
+                    },
+                    "3x35": {
+                      "$ref": "#/$defs/bedrag"
+                    }
+                  }
+                },
+                "bron": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            }
           }
         }
       }

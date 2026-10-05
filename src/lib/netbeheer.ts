@@ -20,6 +20,15 @@ export interface NetbeheerderConfig {
   gecontroleerdOp: string;
   notitie?: string;
   openData?: { url: string; formaat: "csv" | "xlsx" };
+  /** Earlier tariffs, oldest first; each applied from geldigVanaf up to (not including) tot. */
+  eerder?: EerderTarief[];
+}
+
+export interface EerderTarief {
+  geldigVanaf: string;
+  tot: string;
+  tarieven: Record<Categorie, Bedrag>;
+  bron: string;
 }
 
 export interface NetbeheerConfig {
@@ -241,15 +250,26 @@ export function netbeheerderVoor(tabel: Pick<PostcodesBestand, "standaard" | "po
 
 /** Published tariff file: the config without the internal fields. */
 export function bouwNetbeheer(cfg: NetbeheerConfig, nu: string): NetbeheerBestand {
-  for (const n of cfg.netbeheerders) {
+  const controleer = (wie: string, tarieven: Record<Categorie, Bedrag>) => {
     for (const c of CATEGORIEEN) {
-      const b = n.tarieven[c];
-      if (!b) throw new Error(`${n.id}: tarief ${c} ontbreekt`);
+      const b = tarieven[c];
+      if (!b) throw new Error(`${wie}: tarief ${c} ontbreekt`);
       const verhouding = b.bedragInclBtw / b.bedragExclBtw;
-      if (Math.abs(verhouding - 1.21) > 0.002) throw new Error(`${n.id} ${c}: incl. en excl. btw verschillen geen 21% (${verhouding.toFixed(4)})`);
+      if (Math.abs(verhouding - 1.21) > 0.002) throw new Error(`${wie} ${c}: incl. en excl. btw verschillen geen 21% (${verhouding.toFixed(4)})`);
     }
-    if (!(n.tarieven.tm1x10.bedragInclBtw < n.tarieven.tm3x25.bedragInclBtw && n.tarieven.tm3x25.bedragInclBtw < n.tarieven["3x35"].bedragInclBtw)) {
-      throw new Error(`${n.id}: tarieven lopen niet op met de aansluiting`);
+    if (!(tarieven.tm1x10.bedragInclBtw < tarieven.tm3x25.bedragInclBtw && tarieven.tm3x25.bedragInclBtw < tarieven["3x35"].bedragInclBtw)) {
+      throw new Error(`${wie}: tarieven lopen niet op met de aansluiting`);
+    }
+  };
+  for (const n of cfg.netbeheerders) {
+    controleer(n.id, n.tarieven);
+    let vorige = "";
+    for (const e of n.eerder ?? []) {
+      controleer(`${n.id} (${e.geldigVanaf})`, e.tarieven);
+      if (!(e.geldigVanaf < e.tot && e.geldigVanaf >= vorige && e.tot <= n.geldigVanaf)) {
+        throw new Error(`${n.id}: eerder ${e.geldigVanaf}–${e.tot} staat niet op volgorde of loopt over ${n.geldigVanaf} heen`);
+      }
+      vorige = e.tot;
     }
   }
   if (!cfg.netbeheerders.some((n) => n.id === cfg.standaard)) throw new Error(`standaard "${cfg.standaard}" is geen netbeheerder`);

@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-10-05T11:33:12.225Z",
+  "gegenereerdOp": "2026-10-05T20:43:34.126Z",
   "categorieen": {
     "tm1x10": "t/m 1x10A",
     "tm3x25": "> 1x10A t/m 3x25A (ook 1x25A, 1x35A en 1x40A)",
@@ -26,7 +26,28 @@
         }
       },
       "bron": "https://d3a07q56iliqjn.cloudfront.net/web-uploads/Documenten/Tarieven/tarief-2026/KV-periodieke-tarieven_2026.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 103.3066,
+              "bedragInclBtw": 125.001
+            },
+            "tm3x25": {
+              "bedragExclBtw": 336.9316,
+              "bedragInclBtw": 407.6872
+            },
+            "3x35": {
+              "bedragExclBtw": 1426.944,
+              "bedragInclBtw": 1726.6022
+            }
+          },
+          "bron": "https://d3a07q56iliqjn.cloudfront.net/web-uploads/Documenten/Tarieven/Tarief-2025/Kleinverbruik-periodieke-tarieven-2025_PDF.pdf"
+        }
+      ]
     },
     {
       "id": "enexis",
@@ -47,7 +68,28 @@
         }
       },
       "bron": "https://edge-www.enexis.nl/v1/media/edge/images/project/enexisnl/enexisnl/enexis-nl/pdf-documents/tarieven/tarieven-consument/2026/ptkv-elektriciteit--01012026v10.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 115.6685,
+              "bedragInclBtw": 139.9589
+            },
+            "tm3x25": {
+              "bedragExclBtw": 393.324,
+              "bedragInclBtw": 475.922
+            },
+            "3x35": {
+              "bedragExclBtw": 1675.9705,
+              "bedragInclBtw": 2027.9243
+            }
+          },
+          "bron": "https://edge-www.enexis.nl/v1/media/edge/images/project/enexisnl/enexisnl/enexis-nl/pdf-documents/tarieven/tarieven-consument/2025/maandelijks/tarievenelektriciteitmaandelijks01012025.pdf"
+        }
+      ]
     },
     {
       "id": "liander",
@@ -68,7 +110,28 @@
         }
       },
       "bron": "https://www.liander.nl/-/media/files/tarieven/consument/2026/jaarlijkse-netwerkkosten-stroom-2026-v10.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 49.7495,
+              "bedragInclBtw": 60.1969
+            },
+            "tm3x25": {
+              "bedragExclBtw": 376.6435,
+              "bedragInclBtw": 455.7386
+            },
+            "3x35": {
+              "bedragExclBtw": 1546.4685,
+              "bedragInclBtw": 1871.2269
+            }
+          },
+          "bron": "https://www.liander.nl/-/media/files/tarieven/consument/2025/jaarlijkse-netwerkkosten-stroom-2025.pdf"
+        }
+      ]
     },
     {
       "id": "rendo",
@@ -89,7 +152,28 @@
         }
       },
       "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2026/07/Tarievenblad_nettarieven_elektriciteit_KV_2026_versie_1.1_internet.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 121.54,
+              "bedragInclBtw": 147.07
+            },
+            "tm3x25": {
+              "bedragExclBtw": 319.78,
+              "bedragInclBtw": 386.94
+            },
+            "3x35": {
+              "bedragExclBtw": 1254.02,
+              "bedragInclBtw": 1517.37
+            }
+          },
+          "bron": "https://www.rendonetwerken.nl/wp-content/uploads/2024/12/Tarievenblad_nettarieven_elektriciteit_KV_2025_versie_1.0_internet.pdf"
+        }
+      ]
     },
     {
       "id": "stedin",
@@ -110,7 +194,28 @@
         }
       },
       "bron": "https://www.stedin.net/-/media/project/online/files/tarieven/tarieven-2026/tarieven-2026_elektriciteit_kleinverbruik.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 136.06,
+              "bedragInclBtw": 164.64
+            },
+            "tm3x25": {
+              "bedragExclBtw": 391.56,
+              "bedragInclBtw": 473.79
+            },
+            "3x35": {
+              "bedragExclBtw": 1589.5,
+              "bedragInclBtw": 1923.29
+            }
+          },
+          "bron": "https://www.stedin.net/-/media/project/online/files/tarieven/tarieven-2025/tarieven-2025-elektriciteit-kleinverbruik.pdf"
+        }
+      ]
     },
     {
       "id": "westland",
@@ -131,7 +236,28 @@
         }
       },
       "bron": "https://westlandinfra.nl/wp-content/uploads/2025/12/westland-infra-aansluit-en-transporttarieven-elektriciteit-kleinverbruik-2026.pdf",
-      "gecontroleerdOp": "2026-09-28"
+      "gecontroleerdOp": "2026-09-28",
+      "eerder": [
+        {
+          "geldigVanaf": "2025-01-01",
+          "tot": "2026-01-01",
+          "tarieven": {
+            "tm1x10": {
+              "bedragExclBtw": 133.25,
+              "bedragInclBtw": 161.2325
+            },
+            "tm3x25": {
+              "bedragExclBtw": 430.78,
+              "bedragInclBtw": 521.2438
+            },
+            "3x35": {
+              "bedragExclBtw": 1794.6,
+              "bedragInclBtw": 2171.466
+            }
+          },
+          "bron": "https://westlandinfra.nl/wp-content/uploads/2024/12/westland-infra-aansluit-en-transporttarieven-elektriciteit-kleinverbruik-2025.pdf"
+        }
+      ]
     }
   ]
 }
