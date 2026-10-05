@@ -1061,8 +1061,8 @@
             "tot": "2026-09-01",
             "bedragInclBtw": 0.021,
             "bedragExclBtw": 0.017355,
-            "bronUrl": "Jaarafrekening van een Tibber-klant (oktober 2025)",
-            "notitie": "€ 0,021 per kWh incl. btw op de afrekening van een Tibber-klant over oktober 2025 (doorgegeven aan energie27, 05-10-2026). Aangenomen dat dit gold tot de tariefwijziging van 1 september 2026, zoals de andere tarieven hierboven; de exacte datum van de wijziging naar € 0,018 is niet bekend."
+            "bronUrl": "Afrekening van een Tibber-klant (februari en oktober 2025)",
+            "notitie": "€ 0,021 per kWh incl. btw op de afrekening van een Tibber-klant, zowel in februari als in oktober 2025 (doorgegeven aan energie27, 05-10-2026). Aangenomen dat dit gold tot de tariefwijziging van 1 september 2026, zoals de andere tarieven hierboven; de exacte datum van de wijziging naar € 0,018 is niet bekend."
           }
         ],
         "terugleverCorrectie": [
