@@ -19,6 +19,7 @@
     "prijsstijging": "node src/prijsstijging.ts",
     "zonnepanelen": "node src/zonnepanelen.ts",
     "vast": "node src/vast.ts",
+    "brandstof": "node src/brandstof.ts",
     "vaste-contracten": "node src/vaste-contracten.ts",
     "afleiden": "node src/afleiden.ts",
     "rekenhulp": "node src/rekenhulp.ts",

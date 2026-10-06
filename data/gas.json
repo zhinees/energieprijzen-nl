@@ -1,0 +1,118 @@
+{
+  "gegenereerdOp": "2026-10-06T11:41:27.853Z",
+  "valuta": "EUR",
+  "inclBtw": true,
+  "omschrijving": "Gemiddeld vast of variabel gascontract voor huishoudens (CBS), per m³ en per jaar, incl. btw. Het leveringstarief is zonder energiebelasting; totaalPerM3 telt de energiebelasting van die maand erbij. netbeheerPerJaar is het transporttarief van de netbeheerder voor gas.",
+  "bron": {
+    "naam": "CBS StatLine, Gemiddelde energietarieven voor consumenten",
+    "tabel": "85592NED",
+    "url": "https://opendata.cbs.nl/#/CBS/nl/dataset/85592NED/table",
+    "licentie": "CC BY 4.0"
+  },
+  "laatste": {
+    "maand": "2026-08",
+    "leveringPerM3": 0.6526,
+    "energiebelastingPerM3": 0.7268,
+    "totaalPerM3": 1.3794,
+    "vastPerJaar": 92.95,
+    "netbeheerPerJaar": 268.37
+  },
+  "maanden": [
+    {
+      "maand": "2025-09",
+      "leveringPerM3": 0.6269,
+      "energiebelastingPerM3": 0.6996,
+      "totaalPerM3": 1.3265,
+      "vastPerJaar": 91.16,
+      "netbeheerPerJaar": 247.55
+    },
+    {
+      "maand": "2025-10",
+      "leveringPerM3": 0.6126,
+      "energiebelastingPerM3": 0.6996,
+      "totaalPerM3": 1.3122,
+      "vastPerJaar": 91.36,
+      "netbeheerPerJaar": 247.55
+    },
+    {
+      "maand": "2025-11",
+      "leveringPerM3": 0.6058,
+      "energiebelastingPerM3": 0.6996,
+      "totaalPerM3": 1.3054,
+      "vastPerJaar": 91.5,
+      "netbeheerPerJaar": 247.55
+    },
+    {
+      "maand": "2025-12",
+      "leveringPerM3": 0.601,
+      "energiebelastingPerM3": 0.6996,
+      "totaalPerM3": 1.3006,
+      "vastPerJaar": 91.57,
+      "netbeheerPerJaar": 247.55
+    },
+    {
+      "maand": "2026-01",
+      "leveringPerM3": 0.5868,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3136,
+      "vastPerJaar": 92.32,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-02",
+      "leveringPerM3": 0.5767,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3035,
+      "vastPerJaar": 92.36,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-03",
+      "leveringPerM3": 0.5737,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3005,
+      "vastPerJaar": 92.43,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-04",
+      "leveringPerM3": 0.5641,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.2909,
+      "vastPerJaar": 92.55,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-05",
+      "leveringPerM3": 0.5783,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3051,
+      "vastPerJaar": 92.61,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-06",
+      "leveringPerM3": 0.5852,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.312,
+      "vastPerJaar": 92.66,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-07",
+      "leveringPerM3": 0.6277,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3545,
+      "vastPerJaar": 92.87,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-08",
+      "leveringPerM3": 0.6526,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.3794,
+      "vastPerJaar": 92.95,
+      "netbeheerPerJaar": 268.37
+    }
+  ]
+}

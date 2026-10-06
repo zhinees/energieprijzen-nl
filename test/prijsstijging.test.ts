@@ -39,3 +39,16 @@ test("weigert onmogelijke waarden", () => {
   assert.throws(met((c) => { c.cpb!.inflatieCpi = { "2027": 27 }; }), /inflatie/);
   assert.throws(met((c) => { c.pbl!.datum = "2099-01-01"; }), /na gecontroleerdOp/);
 });
+
+test("gas en brandstof: dezelfde volgorde, met een eigen PBL-reeks", () => {
+  const c = structuredClone(cfg);
+  c.cpb!.inflatieCpi = { "2027": 2 };
+  c.dragers = { gas: { omschrijving: "gas", pbl: { publicatie: "KEV", url: "https://www.pbl.nl/", datum: "2026-10-01", tabel: "7b", prijspeil: 2025, prijs: { eenheid: "€/MWh", vanJaar: 2025, van: 40, naarJaar: 2026, naar: 40 } } } };
+  const b = bouwPrijsstijging(c, nu);
+  assert.deepEqual([b.perDrager.gas.bron, b.perDrager.gas.procentPerJaar], ["pbl", 2]);
+  assert.deepEqual([b.perDrager.brandstof.bron, b.perDrager.brandstof.procentPerJaar], ["cpb", 2]);
+  // De stroom blijft zoals hij was.
+  assert.equal(b.standaard.bron, "pbl");
+  delete c.cpb; delete c.dragers;
+  assert.deepEqual(bouwPrijsstijging(c, nu).perDrager.gas.bron, "terugval");
+});

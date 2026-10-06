@@ -1,6 +1,6 @@
 {
   "$schema": "../schema/prijsstijging-config.schema.json",
-  "$comment": "Standaard voor de prijsstijging per jaar van de marktprijs van stroom, met de hand overgenomen uit PBL (KEV) en CPB (MEV). Controleren in september/oktober (KEV en MEV verschijnen dan). `npm run prijsstijging` schrijft data/prijsstijging.json.",
+  "$comment": "Standaard voor de prijsstijging per jaar van de marktprijs van stroom, en apart van gas en van benzine/diesel (dragers), met de hand overgenomen uit PBL (KEV) en CPB (MEV). Controleren in september/oktober (KEV en MEV verschijnen dan). `npm run prijsstijging` schrijft data/prijsstijging.json.",
   "gecontroleerdOp": "2026-10-06",
   "omschrijving": "Verwachte verandering per jaar van de groothandelsprijs (marktprijs, day-ahead) van stroom, als standaard voor rekenhulpen die de uurprijzen van het afgelopen jaar doortrekken naar een volgend jaar. Geldt voor de marktprijs, niet voor vaste tarieven, netbeheer of energiebelasting.",
   "volgorde": "Eerst PBL (verwachte groothandelsprijs, in vaste prijzen, plus de inflatie van CPB om naar lopende prijzen te gaan); zonder PBL de inflatie van CPB; zonder beide 10% per jaar.",
@@ -32,5 +32,13 @@
     },
     "notitie": "CPI-inflatie in procenten per jaar; voor de omrekening naar lopende prijzen geldt het laatste jaar."
   },
-  "terugvalProcentPerJaar": 10
+  "terugvalProcentPerJaar": 10,
+  "dragers": {
+    "gas": {
+      "omschrijving": "Leveringstarief van gas (zonder energiebelasting, die per jaar uit data/energiebelasting.json komt). Nog geen PBL-reeks overgenomen: de groothandelsprijs aardgas staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie."
+    },
+    "brandstof": {
+      "omschrijving": "Pompprijs van benzine en diesel (incl. accijns en btw). Nog geen PBL-reeks overgenomen: de olieprijs staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie."
+    }
+  }
 }

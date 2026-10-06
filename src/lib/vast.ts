@@ -3,8 +3,8 @@
 // voor consumenten"). Used as a default for whoever does not know their own fixed tariff.
 
 export const CBS_TABEL = "85592NED";
-export const CBS_URL = `https://opendata.cbs.nl/ODataApi/odata/${CBS_TABEL}/TypedDataSet?$select=Btw,Perioden,VastLeveringstariefVasteEnVar_8,VariabelLeveringstariefContractprijs_9,Energiebelasting_14&$filter=Btw%20eq%20'A048944'`;
-const INCL_BTW = "A048944";
+export const CBS_URL = `https://opendata.cbs.nl/ODataApi/odata/${CBS_TABEL}/TypedDataSet?$select=Btw,Perioden,Transporttarief_1,VastLeveringstariefVasteEnVar_2,VariabelLeveringstariefContractprijs_3,Energiebelasting_6,VastLeveringstariefVasteEnVar_8,VariabelLeveringstariefContractprijs_9,Energiebelasting_14&$filter=Btw%20eq%20'A048944'`;
+export const INCL_BTW = "A048944";
 
 export type CbsRij = {
   Btw: string;
@@ -12,6 +12,11 @@ export type CbsRij = {
   VastLeveringstariefVasteEnVar_8: number | null;
   VariabelLeveringstariefContractprijs_9: number | null;
   Energiebelasting_14: number | null;
+  // Gas (lib/gas.ts): the same table, the same request.
+  Transporttarief_1?: number | null;
+  VastLeveringstariefVasteEnVar_2?: number | null;
+  VariabelLeveringstariefContractprijs_3?: number | null;
+  Energiebelasting_6?: number | null;
 };
 
 export type VastMaand = {
