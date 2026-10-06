@@ -1,26 +1,26 @@
 {
   "$schema": "../schema/prijsstijging-config.schema.json",
   "$comment": "Standaard voor de prijsstijging per jaar van de marktprijs van stroom, met de hand overgenomen uit PBL (KEV) en CPB (MEV). Controleren in september/oktober (KEV en MEV verschijnen dan). `npm run prijsstijging` schrijft data/prijsstijging.json.",
-  "gecontroleerdOp": "2026-10-05",
+  "gecontroleerdOp": "2026-10-06",
   "omschrijving": "Verwachte verandering per jaar van de groothandelsprijs (marktprijs, day-ahead) van stroom, als standaard voor rekenhulpen die de uurprijzen van het afgelopen jaar doortrekken naar een volgend jaar. Geldt voor de marktprijs, niet voor vaste tarieven, netbeheer of energiebelasting.",
   "volgorde": "Eerst PBL (verwachte groothandelsprijs, in vaste prijzen, plus de inflatie van CPB om naar lopende prijzen te gaan); zonder PBL de inflatie van CPB; zonder beide 10% per jaar.",
   "pbl": {
-    "publicatie": "Klimaat- en Energieverkenning 2025",
-    "tabel": "Tabel 1.5 Economische groei, energie- en CO2-prijzen (basispad)",
-    "url": "https://www.pbl.nl/system/files/document/2025-09/pbl-2025-klimaat-en-energieverkenning-2025-5692.pdf",
-    "datum": "2026-10-05",
-    "prijspeil": 2024,
+    "publicatie": "Klimaat- en Energieverkenning 2026",
+    "tabel": "Tabel 1.5 Economische groei, energie- en CO2-prijzen (rapport, p. 42); in de tabellenbijlage Tabel 7b Prijzen in constante prijzen 2025 (basispad met vastgesteld en voorgenomen beleid)",
+    "url": "https://www.pbl.nl/publicaties/klimaat-en-energieverkenning-2026",
+    "datum": "2026-10-06",
+    "prijspeil": 2025,
     "groothandelsprijsPerMWh": {
-      "vanJaar": 2024,
-      "van": 77,
+      "vanJaar": 2025,
+      "van": 87,
       "naarJaar": 2030,
-      "naar": 73
+      "naar": 70
     },
     "bandbreedteNaar": {
-      "van": 48,
-      "tot": 105
+      "van": 53,
+      "tot": 90
     },
-    "notitie": "2024 voorlopige gegevens; prijzen in prijspeil 2024 (zonder inflatie)."
+    "notitie": "Groothandelsprijs elektriciteit basislast; 2025 voorlopige gegevens (CBS); 2030 uitkomst van de raming. Prijspeil 2025 (zonder inflatie). Tabellenbijlage versie 1.0, september 2026."
   },
   "cpb": {
     "publicatie": "Macro Economische Verkenning 2027 (septemberraming 2026)",
