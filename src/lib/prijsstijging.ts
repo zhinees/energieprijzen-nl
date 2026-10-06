@@ -10,9 +10,12 @@ export type PrijsstijgingConfig = {
   pbl?: Bron & { tabel: string; prijspeil: number; groothandelsprijsPerMWh: { vanJaar: number; van: number; naarJaar: number; naar: number }; bandbreedteNaar?: { van: number; tot: number } };
   cpb?: Bron & { inflatieCpi: Record<string, number> };
   terugvalProcentPerJaar: number;
+  /** Gas and motor fuel: the same order, each with its own PBL series (a price in real terms, prijspeil) when there is one. */
+  dragers?: Partial<Record<Drager, { omschrijving: string; pbl?: Bron & { tabel: string; prijspeil: number; prijs: { eenheid: string; vanJaar: number; van: number; naarJaar: number; naar: number } } }>>;
 };
+export type Drager = "gas" | "brandstof";
 export type Standaard = { procentPerJaar: number; bron: "pbl" | "cpb" | "terugval"; berekening: string };
-export type PrijsstijgingBestand = { gegenereerdOp: string; gecontroleerdOp: string; standaard: Standaard } & Omit<PrijsstijgingConfig, "gecontroleerdOp">;
+export type PrijsstijgingBestand = { gegenereerdOp: string; gecontroleerdOp: string; standaard: Standaard; perDrager: Record<Drager, Standaard & { omschrijving: string }> } & Omit<PrijsstijgingConfig, "gecontroleerdOp">;
 
 const afgerond = (x: number) => Math.round(x * 10) / 10;
 
@@ -41,6 +44,27 @@ export function bouwPrijsstijging(cfg: PrijsstijgingConfig, nu: string): Prijsst
   } else {
     standaard = { procentPerJaar: cfg.terugvalProcentPerJaar, bron: "terugval", berekening: `geen PBL- of CPB-raming: ${cfg.terugvalProcentPerJaar}% per jaar` };
   }
+  // Gas and motor fuel: PBL of that carrier (real, plus the CPB inflation), else the CPB inflation, else the fallback.
+  const perDrager = {} as PrijsstijgingBestand["perDrager"];
+  for (const d of ["gas", "brandstof"] as Drager[]) {
+    const c = cfg.dragers?.[d], p = c?.pbl;
+    const omschrijving = c?.omschrijving ?? (d === "gas" ? "Leveringstarief van gas (zonder energiebelasting)." : "Pompprijs van benzine en diesel.");
+    if (p) {
+      if (p.datum > cfg.gecontroleerdOp) throw new Error(`bron ${p.url} heeft een datum na gecontroleerdOp`);
+      if (!(p.prijs.van > 0 && p.prijs.naar > 0 && p.prijs.naarJaar > p.prijs.vanJaar)) throw new Error(`pbl ${d}: prijs en jaren onmogelijk`);
+      const reeel = (p.prijs.naar / p.prijs.van) ** (1 / (p.prijs.naarJaar - p.prijs.vanJaar)) - 1;
+      const nominaal = inflatie !== undefined ? (1 + reeel) * (1 + inflatie / 100) - 1 : reeel;
+      perDrager[d] = {
+        omschrijving, procentPerJaar: afgerond(nominaal * 100), bron: "pbl",
+        berekening: `PBL ${p.publicatie}: ${p.prijs.eenheid} ${p.prijs.van} (${p.prijs.vanJaar}) naar ${p.prijs.naar} (${p.prijs.naarJaar}), prijspeil ${p.prijspeil}: ${afgerond(reeel * 100)}% per jaar`
+          + (inflatie !== undefined ? `; plus inflatie ${inflatie}% (CPB, ${inflatieJaar})` : "; zonder inflatie (geen CPB-raming)"),
+      };
+    } else if (inflatie !== undefined) {
+      perDrager[d] = { omschrijving, procentPerJaar: afgerond(inflatie), bron: "cpb", berekening: `geen PBL-raming voor ${d}; CPB ${cfg.cpb!.publicatie}: inflatie ${inflatie}% (${inflatieJaar})` };
+    } else {
+      perDrager[d] = { omschrijving, procentPerJaar: cfg.terugvalProcentPerJaar, bron: "terugval", berekening: `geen PBL- of CPB-raming: ${cfg.terugvalProcentPerJaar}% per jaar` };
+    }
+  }
   const { gecontroleerdOp, $schema: _s, $comment: _c, ...rest } = cfg as typeof cfg & { $schema?: string; $comment?: string };
-  return { gegenereerdOp: nu, gecontroleerdOp, standaard, ...rest };
+  return { gegenereerdOp: nu, gecontroleerdOp, standaard, perDrager, ...rest };
 }

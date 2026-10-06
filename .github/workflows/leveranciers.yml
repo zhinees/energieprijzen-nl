@@ -34,6 +34,7 @@ jobs:
       - run: npm run belasting
       - run: npm run netbeheer
       - run: npm run vast
+      - run: npm run brandstof
       - run: npm run leveranciers
       - run: npm run bewaken
       - run: npm run afleiden

@@ -144,6 +144,164 @@
       "type": "number",
       "minimum": -20,
       "maximum": 30
+    },
+    "dragers": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gas": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "omschrijving"
+          ],
+          "properties": {
+            "omschrijving": {
+              "type": "string"
+            },
+            "pbl": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "publicatie",
+                "url",
+                "datum",
+                "tabel",
+                "prijspeil",
+                "prijs"
+              ],
+              "properties": {
+                "publicatie": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "datum": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "notitie": {
+                  "type": "string"
+                },
+                "tabel": {
+                  "type": "string"
+                },
+                "prijspeil": {
+                  "type": "integer"
+                },
+                "prijs": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "eenheid",
+                    "vanJaar",
+                    "van",
+                    "naarJaar",
+                    "naar"
+                  ],
+                  "properties": {
+                    "eenheid": {
+                      "type": "string"
+                    },
+                    "vanJaar": {
+                      "type": "integer"
+                    },
+                    "van": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "naarJaar": {
+                      "type": "integer"
+                    },
+                    "naar": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "brandstof": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "omschrijving"
+          ],
+          "properties": {
+            "omschrijving": {
+              "type": "string"
+            },
+            "pbl": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "publicatie",
+                "url",
+                "datum",
+                "tabel",
+                "prijspeil",
+                "prijs"
+              ],
+              "properties": {
+                "publicatie": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "datum": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "notitie": {
+                  "type": "string"
+                },
+                "tabel": {
+                  "type": "string"
+                },
+                "prijspeil": {
+                  "type": "integer"
+                },
+                "prijs": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "eenheid",
+                    "vanJaar",
+                    "van",
+                    "naarJaar",
+                    "naar"
+                  ],
+                  "properties": {
+                    "eenheid": {
+                      "type": "string"
+                    },
+                    "vanJaar": {
+                      "type": "integer"
+                    },
+                    "van": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    "naarJaar": {
+                      "type": "integer"
+                    },
+                    "naar": {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

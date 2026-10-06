@@ -123,10 +123,12 @@ await controleer("laden.schema.json", join(DATA, "laden.json"));
 await controleer("prijsstijging.schema.json", join(DATA, "prijsstijging.json"));
 await controleer("zonnepanelen.schema.json", join(DATA, "zonnepanelen.json"));
 await controleer("vast.schema.json", join(DATA, "vast.json"));
+await controleer("gas.schema.json", join(DATA, "gas.json"));
+await controleer("brandstof.schema.json", join(DATA, "brandstof.json"));
 await controleer("vaste-contracten.schema.json", join(DATA, "vaste-contracten.json"));
 
 if (fouten) {
   console.error(`\n${fouten} probleem/problemen`);
   process.exit(1);
 }
-console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, de batterijmodellen, thuis laden, de prijsstijging, de prijs van zonnepanelen, het gemiddelde vaste contract, de vaste contracten en de databestanden zijn geldig`);
+console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, de batterijmodellen, thuis laden, de prijsstijging, de prijs van zonnepanelen, het gemiddelde vaste contract (stroom en gas), de pompprijzen, de vaste contracten en de databestanden zijn geldig`);

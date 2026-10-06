@@ -1,10 +1,24 @@
 {
-  "gegenereerdOp": "2026-10-06T11:18:52.274Z",
+  "gegenereerdOp": "2026-10-06T11:42:06.904Z",
   "gecontroleerdOp": "2026-10-06",
   "standaard": {
     "procentPerJaar": -1.7,
     "bron": "pbl",
     "berekening": "PBL Klimaat- en Energieverkenning 2026: groothandelsprijs € 87 per MWh (2025) naar € 70 (2030), prijspeil 2025: -4.3% per jaar; plus inflatie 2.7% (CPB, 2027)"
+  },
+  "perDrager": {
+    "gas": {
+      "omschrijving": "Leveringstarief van gas (zonder energiebelasting, die per jaar uit data/energiebelasting.json komt). Nog geen PBL-reeks overgenomen: de groothandelsprijs aardgas staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie.",
+      "procentPerJaar": 2.7,
+      "bron": "cpb",
+      "berekening": "geen PBL-raming voor gas; CPB Macro Economische Verkenning 2027 (septemberraming 2026): inflatie 2.7% (2027)"
+    },
+    "brandstof": {
+      "omschrijving": "Pompprijs van benzine en diesel (incl. accijns en btw). Nog geen PBL-reeks overgenomen: de olieprijs staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie.",
+      "procentPerJaar": 2.7,
+      "bron": "cpb",
+      "berekening": "geen PBL-raming voor brandstof; CPB Macro Economische Verkenning 2027 (septemberraming 2026): inflatie 2.7% (2027)"
+    }
   },
   "omschrijving": "Verwachte verandering per jaar van de groothandelsprijs (marktprijs, day-ahead) van stroom, als standaard voor rekenhulpen die de uurprijzen van het afgelopen jaar doortrekken naar een volgend jaar. Geldt voor de marktprijs, niet voor vaste tarieven, netbeheer of energiebelasting.",
   "volgorde": "Eerst PBL (verwachte groothandelsprijs, in vaste prijzen, plus de inflatie van CPB om naar lopende prijzen te gaan); zonder PBL de inflatie van CPB; zonder beide 10% per jaar.",
@@ -36,5 +50,13 @@
     },
     "notitie": "CPI-inflatie in procenten per jaar; voor de omrekening naar lopende prijzen geldt het laatste jaar."
   },
-  "terugvalProcentPerJaar": 10
+  "terugvalProcentPerJaar": 10,
+  "dragers": {
+    "gas": {
+      "omschrijving": "Leveringstarief van gas (zonder energiebelasting, die per jaar uit data/energiebelasting.json komt). Nog geen PBL-reeks overgenomen: de groothandelsprijs aardgas staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie."
+    },
+    "brandstof": {
+      "omschrijving": "Pompprijs van benzine en diesel (incl. accijns en btw). Nog geen PBL-reeks overgenomen: de olieprijs staat in KEV-tabel 7b; tot die is overgenomen geldt de CPB-inflatie."
+    }
+  }
 }

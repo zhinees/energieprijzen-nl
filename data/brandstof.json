@@ -1,0 +1,33 @@
+{
+  "gegenereerdOp": "2026-10-06T11:41:27.853Z",
+  "valuta": "EUR",
+  "inclBtw": true,
+  "omschrijving": "Gemiddelde pompprijs van benzine (Euro95) en diesel in Nederland (CBS), per liter, incl. btw en accijns: het gemiddelde van de laatste 30 dagen en per maand.",
+  "bron": {
+    "naam": "CBS StatLine, Pompprijzen motorbrandstoffen",
+    "tabel": "80416NED",
+    "url": "https://opendata.cbs.nl/#/CBS/nl/dataset/80416NED/table",
+    "licentie": "CC BY 4.0"
+  },
+  "laatste": {
+    "van": "2026-08-30",
+    "tot": "2026-09-28",
+    "dagen": 30,
+    "benzinePerLiter": 2.441,
+    "dieselPerLiter": 2.486
+  },
+  "maanden": [
+    {
+      "maand": "2026-08",
+      "dagen": 31,
+      "benzinePerLiter": 2.333,
+      "dieselPerLiter": 2.369
+    },
+    {
+      "maand": "2026-09",
+      "dagen": 28,
+      "benzinePerLiter": 2.448,
+      "dieselPerLiter": 2.497
+    }
+  ]
+}
