@@ -16,6 +16,8 @@ Een onafhankelijk, open overzicht van wat Nederlandse leveranciers rekenen voor 
 
 Zie het als een filterlijst van een adblocker. De data staat als gewone JSON- en CSV-bestanden in deze repo, en een geplande taak houdt die actueel. Iedereen mag de bestanden gebruiken voor vergelijkingssites, domotica of onderzoek. Correcties gaan via pull requests.
 
+Wil je met je eigen verbruik per uur doorrekenen wat deze tarieven voor jou betekenen, ook zonder saldering en met een thuisbatterij of elektrische auto? Dat kan op [energie27.nl](https://energie27.nl), een gratis rekenhulp van dezelfde maker die deze data gebruikt.
+
 **Marktprijzen staan hier bewust niet in.** Die haal je met één verzoek zelf op bij [EnergyZero](https://www.energyzero.nl) of het [ENTSO-E Transparency Platform](https://transparency.entsoe.eu). Tel daar de tarieven uit deze repo bij op; zie [`voorbeelden/prijs-op-uur.mjs`](voorbeelden/prijs-op-uur.mjs).
 
 > **Gericht op consumenten: de hoofdbedragen zijn inclusief 21% btw.** Elk bedrag heeft `InclBtw` of `ExclBtw` in de veldnaam, zodat je nooit hoeft te raden. Netbeheerkosten zitten niet in de leverancierstarieven, want die verschillen per regio; ze staan apart in `data/netbeheer.json`, met in `data/netbeheer-postcodes.json` de netbeheerder per postcode.
