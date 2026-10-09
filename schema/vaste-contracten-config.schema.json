@@ -64,6 +64,7 @@
           "id",
           "leverancier",
           "naam",
+          "alleenModelcontract",
           "looptijdMaanden",
           "tariefUrl",
           "tarieven"
@@ -81,6 +82,10 @@
           },
           "naam": {
             "type": "string"
+          },
+          "alleenModelcontract": {
+            "type": "boolean",
+            "description": "true als de leverancier geen eigen vast contract verkoopt: dit modelcontract met vast tarief publiceert hij omdat het moet (vaak met hoge vaste kosten), niet als gewoon aanbod. Zulke leveranciers verkopen vooral dynamische of variabele contracten."
           },
           "looptijdMaanden": {
             "type": [

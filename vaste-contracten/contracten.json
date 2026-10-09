@@ -1,11 +1,12 @@
 {
   "$schema": "../schema/vaste-contracten-config.schema.json",
-  "gecontroleerdOp": "2026-10-05",
+  "gecontroleerdOp": "2026-10-09",
   "contracten": [
     {
       "id": "delta-modelcontract-1-jaar-vast",
       "leverancier": "DELTA Energie",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.deltaenergie.nl/service/info/modelcontract/",
       "geldigVanaf": "2026-09-16",
@@ -48,6 +49,7 @@
       "leverancier": "Pure Energie",
       "leverancierId": "pure",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://pure-energie.nl/modelcontract/",
       "geldigVanaf": "2026-09-24",
@@ -91,6 +93,7 @@
       "leverancier": "Budget Energie",
       "leverancierId": "budget",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.budgetthuis.nl/energie/modelcontract",
       "tarieven": {
@@ -133,6 +136,7 @@
       "leverancier": "Vattenfall",
       "leverancierId": "vattenfall",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.vattenfall.nl/energie/modelcontract-energie/",
       "postcode": "8801 KE",
@@ -177,6 +181,7 @@
       "leverancier": "Eneco",
       "leverancierId": "eneco",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.eneco.nl/duurzame-energie/modelcontract/",
       "tarieven": {
@@ -220,6 +225,7 @@
       "leverancier": "Essent",
       "leverancierId": "essent",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.essent.nl/energie/modelcontract",
       "postcode": "8801 KE",
@@ -264,6 +270,7 @@
       "leverancier": "Energiedirect",
       "leverancierId": "energiedirect",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.energiedirect.nl/modelcontract",
       "postcode": "8801 KE",
@@ -307,6 +314,7 @@
       "id": "engie-modelcontract-1-jaar-vast",
       "leverancier": "ENGIE",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://energie.engie.nl/modelcontract",
       "postcode": "8801 KE",
@@ -350,6 +358,7 @@
       "id": "oxxio-modelcontract-1-jaar-vast",
       "leverancier": "Oxxio",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.oxxio.nl/stroom-en-gas/modelcontract",
       "tarieven": {
@@ -393,6 +402,7 @@
       "leverancier": "Vandebron",
       "leverancierId": "vandebron",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://vandebron.nl/modelcontract",
       "tarieven": {
@@ -435,6 +445,7 @@
       "id": "coolblue-modelcontract-1-jaar-vast",
       "leverancier": "Coolblue Energie",
       "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
       "looptijdMaanden": 12,
       "tariefUrl": "https://www.coolblue.nl/energiecontracten/modelcontract",
       "tarieven": {
@@ -472,6 +483,440 @@
         }
       },
       "notitie": "Op de pagina staat geen ingangsdatum van de tarieven, alleen 'Bijgewerkt op 30 september 2026'. Het adres maakt voor het leveringstarief niet uit. Bij de netbeheerkosten op de pagina rekent Coolblue met Liander; die nemen we niet over."
+    },
+    {
+      "id": "anwb-modelcontract-1-jaar-vast",
+      "leverancier": "ANWB Energie",
+      "leverancierId": "anwb",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": true,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.anwb.nl/energie/modelcontract-2026",
+      "geldigVanaf": "2026-09-01",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.324885,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.anwb.nl/energie/modelcontract-2026",
+          "notitie": "'3) Modelcontract Vast Stroom – 1 jaar': enkeltarief € 0,435733 vanaf 01/09/2026, 'inclusief energiebelasting € 0,110848'; de energiebelasting 2026 van € 0,110848 incl. btw (eerste schijf) is afgetrokken. Tot en met 31/08/2026 was het € 0,399917 incl. energiebelasting."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 48.0,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.anwb.nl/energie/modelcontract-2026",
+          "notitie": "'Vaste leveringskosten € 48,00 per maand' (in het blok Modelcontract Vast Stroom; het variabele modelcontract heeft hetzelfde bedrag)."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.01,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.anwb.nl/energie/modelcontract-2026",
+          "notitie": "'Terugleververgoeding (netto teruglevering) € 0,010 per kWh'. De pagina zegt niet of hier btw in zit; het bedrag is overgenomen zoals het er staat."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.07,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.anwb.nl/energie/modelcontract-2026",
+          "notitie": "'Terugleverkosten (over gehele teruglevering) € 0,070 per kWh'. Geen staffel en geen apart bedrag vanaf 1-1-2027."
+        }
+      },
+      "notitie": "Alleen telefonisch af te sluiten. De pagina zegt ook 'Het modelcontract is altijd met een variabel tarief', maar toont een apart blok 'Modelcontract Vast Stroom – 1 jaar'; dat blok is hier overgenomen. Prijzen incl. btw: de genoemde energiebelasting (€ 0,110848) is het bedrag incl. btw."
+    },
+    {
+      "id": "frank-modelcontract-1-jaar-vast",
+      "leverancier": "Frank Energie",
+      "leverancierId": "frank",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": true,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.frankenergie.nl/nl/modelcontract",
+      "geldigVanaf": "2026-07-01",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.218123,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.frankenergie.nl/nl/modelcontract",
+          "notitie": "'Vast Modelcontractprijzen Frank Energie vanaf 01-07-2026': stroom € 0,328971 per kWh, 'inclusief 21 % btw en energiebelasting'; de energiebelasting 2026 van € 0,110848 incl. btw (eerste schijf) is afgetrokken."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 30.0,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.frankenergie.nl/nl/modelcontract",
+          "notitie": "'Vastrecht stroom: € 30 /maand'."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.10256,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.frankenergie.nl/nl/modelcontract",
+          "notitie": "'Terugleververgoeding: € 0,10256 /kWh'. De prijzen zijn 'anders dan de teruglevering' incl. btw. Btw-vrij: dit bedrag krijgt de consument, dus niet met 21% btw verhoogd."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.09756,
+          "inclBtw": false,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.frankenergie.nl/nl/modelcontract",
+          "notitie": "'Terugleverkosten: € 0,097560 /kWh'. Volgens de pagina zijn de prijzen 'anders dan de teruglevering' incl. btw; dit bedrag is daarom als excl. btw gelezen. Geen apart bedrag vanaf 1-1-2027."
+        }
+      }
+    },
+    {
+      "id": "nextenergy-modelcontract-1-jaar-vast",
+      "leverancier": "NextEnergy",
+      "leverancierId": "nextenergy",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": true,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.nextenergy.nl/meer-info/modelcontract",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.260652,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.nextenergy.nl/meer-info/modelcontract",
+          "notitie": "'Modelcontract 1 jaar vast': stroom € 0,3715 per kWh, 'inclusief 21% btw en bij stroom en gas levering inclusief energiebelasting'; de energiebelasting 2026 van € 0,110848 incl. btw (eerste schijf) is afgetrokken."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 35.99,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.nextenergy.nl/meer-info/modelcontract",
+          "notitie": "'Vaste leveringskosten: € 35,99 / maand / stroom'."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.1304,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.nextenergy.nl/meer-info/modelcontract",
+          "notitie": "'Terugleververgoeding: € 0,1304 kWh'; tot 1-1-2027 wordt gesaldeerd. Dezelfde waarde staat bij 'Voorlopig prijzen vanaf 1-1-2027'. De pagina zegt niet of hier btw in zit; het bedrag is overgenomen zoals het er staat."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.1254,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.nextenergy.nl/meer-info/modelcontract",
+          "notitie": "'Terugleverkosten: €0,1254 /kWh', vanaf 1-1-2027 ('Voorlopig prijzen vanaf 1-1-2027')."
+        }
+      },
+      "notitie": "Geen ingangsdatum bij het blok '1 jaar vast' op de pagina."
+    },
+    {
+      "id": "zonneplan-modelcontract-1-jaar-vast",
+      "leverancier": "Zonneplan",
+      "leverancierId": "zonneplan",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": true,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.zonneplan.nl/modelcontract",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.289152,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonneplan.nl/modelcontract",
+          "notitie": "'Vast modelcontract … inclusief energiebelasting en btw. Stroom: €0,40 per kWh (normaal, dal en piektarief)'; de energiebelasting 2026 van € 0,110848 incl. btw (eerste schijf) is afgetrokken."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 40.0,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonneplan.nl/modelcontract",
+          "notitie": "'Vaste leveringskosten: €40,- per maand per product (stroom/gas)'."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.01,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonneplan.nl/modelcontract",
+          "notitie": "'met een terugleververgoeding (excl. energiebelasting) van €0,01 per kWh'. Volgens de bevestigingsbrief tot en vanaf 1 januari 2027 gelijk."
+        }
+      },
+      "notitie": "De bevestigingsbrief (Bevestigingsbrief-Vast-1-9-26.pdf) noemt dezelfde bedragen en terugleverkosten € 0 per kWh, voor en na 1-1-2027; die brief staat op Amazon S3 en niet op zonneplan.nl, dus de terugleverkosten zijn hier niet als gecontroleerde waarde opgenomen."
+    },
+    {
+      "id": "powerpeers-modelcontract-1-jaar-vast",
+      "leverancier": "Powerpeers",
+      "leverancierId": "powerpeers",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://powerpeers.nl/modelcontract/",
+      "postcode": "1011 AB",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.229416,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://powerpeers.nl/modelcontract/",
+          "notitie": "Uit de postcodetool op de pagina (achterliggende rekenservice van Powerpeers, product 'Model 1 jaar vast', E_PP_MODEL_1JR; 1011 AB, 2.500 kWh). 'Powerpeers Stroom' 0,229416 per kWh; de energiebelasting (0,110848, het bedrag incl. btw) staat als aparte regel, dus dit is zonder energiebelasting en incl. btw."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 9.99,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://powerpeers.nl/modelcontract/",
+          "notitie": "Uit de postcodetool op de pagina (achterliggende rekenservice van Powerpeers, product 'Model 1 jaar vast', E_PP_MODEL_1JR; 1011 AB, 2.500 kWh). 'Vaste leveringskosten stroom model' € 119,88 per jaar (€ 0,32843836 per dag) = € 9,99 per maand."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.0948,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://powerpeers.nl/modelcontract/",
+          "notitie": "Uit de postcodetool op de pagina (achterliggende rekenservice van Powerpeers, product 'Model 1 jaar vast', E_PP_MODEL_1JR; 1011 AB, 2.500 kWh). Terugleververgoeding 0,0948 per kWh, in 2026 en vanaf 1-1-2027 gelijk. Btw-vrij: dit bedrag krijgt de consument, dus niet met 21% btw verhoogd."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.067639,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://powerpeers.nl/modelcontract/",
+          "notitie": "Uit de postcodetool op de pagina (achterliggende rekenservice van Powerpeers, product 'Model 1 jaar vast', E_PP_MODEL_1JR; 1011 AB, 2.500 kWh). 'Variabele terugleverkosten' 0,067639 per kWh, voor en na 1-1-2027 gelijk. Per kWh, geen staffel (de staffel in Powerpeers-vaste-terugleverkosten.pdf hoort bij de gewone contracten)."
+        }
+      },
+      "notitie": "De pagina toont de tarieven pas na een postcode; geen tariefblad als pdf."
+    },
+    {
+      "id": "cleanenergy-modelcontract-1-jaar-vast",
+      "leverancier": "Clean Energy",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.cleanenergy.nl/modelcontract",
+      "geldigVanaf": "2026-09-01",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.22506,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.cleanenergy.nl/files/2026-08/Tarievenblad%20Modelcontract%20-%201%20jaar%20vast.pdf",
+          "notitie": "'enkeltarief (exclusief energiebelasting)' € 0,18600 excl. btw, € 0,22506 incl. btw. Normaal en dal gelijk."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 12.04,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.cleanenergy.nl/files/2026-08/Tarievenblad%20Modelcontract%20-%201%20jaar%20vast.pdf",
+          "notitie": "'vaste leveringskosten' € 0,39582 per dag incl. btw (€ 0,32712 excl.); × 365 / 12 = € 12,04 per maand."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.12397,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.cleanenergy.nl/files/2026-08/Tarievenblad%20Modelcontract%20-%201%20jaar%20vast.pdf",
+          "notitie": "Het tariefblad noemt € 0,12397 excl. btw en € 0,15000 incl. btw. Een huishouden krijgt geen btw over de terugleververgoeding, dus hier € 0,12397 (zoals bij de andere leveranciers het bedrag dat de consument krijgt)."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.14,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.cleanenergy.nl/files/2026-08/Tarievenblad%20Modelcontract%20-%201%20jaar%20vast.pdf",
+          "notitie": "'terugleverkosten' € 0,14000 incl. btw (€ 0,11570 excl.). Geen apart bedrag voor of na 1-1-2027."
+        }
+      },
+      "notitie": "'De tarieven zijn geldig vanaf 1 september 2026.' Tarievenblad Modelcontract 1 jaar vast."
+    },
+    {
+      "id": "innova-modelcontract-1-jaar-vast",
+      "leverancier": "Innova Energie",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.innovaenergie.nl/modelcontract/",
+      "geldigVanaf": "2026-10-06",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.18928,
+          "inclBtw": false,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.innovaenergie.nl/wp-content/uploads/2026/10/Innova-Tariefblad_MODELCONTRACT_VAST-per-06-10-2026-.pdf",
+          "notitie": "Enkeltarief € 0,18928 excl. btw, zonder energiebelasting (energiebelasting € 0,09161 en btw staan als aparte kolommen; totaal incl. btw € 0,33988). Normaal € 0,20199, dal € 0,18229 (excl. btw)."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 18.55,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.innovaenergie.nl/wp-content/uploads/2026/10/Innova-Tariefblad_MODELCONTRACT_VAST-per-06-10-2026-.pdf",
+          "notitie": "Vaste leveringskosten € 222,64 per jaar incl. btw (€ 184,00 excl.) = € 18,55 per maand. Zonder actief terugleverregister op de meter komt er een toeslag bij (vanaf 1-1-2027 € 484,00 per jaar incl. btw)."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.101,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.innovaenergie.nl/wp-content/uploads/2026/10/Innova-Tariefblad_MODELCONTRACT_VAST-per-06-10-2026-.pdf",
+          "notitie": "Kleine aansluiting € 0,10100; 'Als u de elektriciteit overwegend voor uw huishouden gebruikt, dan wordt over de terugleververgoeding geen btw vergoed.' Btw-vrij: dit bedrag krijgt de consument, dus niet met 21% btw verhoogd."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.0983,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.innovaenergie.nl/wp-content/uploads/2026/10/Innova-Tariefblad_MODELCONTRACT_VAST-per-06-10-2026-.pdf",
+          "notitie": "Vanaf 1 januari 2027 € 0,08124 excl. btw, € 0,09830 incl. btw (tot 1 januari 2027: € 0,13310 incl. btw)."
+        }
+      },
+      "notitie": "'Deze leveringstarieven gelden vanaf 6 oktober 2026.'"
+    },
+    {
+      "id": "zonopnaam-modelcontract-1-jaar-vast",
+      "leverancier": "Zonopnaam Energie",
+      "leverancierId": "zonopnaam",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.zonopnaam.nl/modelcontract",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.2686,
+          "inclBtw": false,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonopnaam.nl/files/pdf/ZON_Tarievenblad_2026M10_Modelcontract_Vast_V01.pdf",
+          "notitie": "Enkeltarief € 0,2686 excl. btw, zonder energiebelasting (energiebelasting € 0,0916, btw € 0,0757, totaal € 0,4359). Normaal € 0,2864, dal € 0,2527 (excl. btw)."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 50.0,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonopnaam.nl/files/pdf/ZON_Tarievenblad_2026M10_Modelcontract_Vast_V01.pdf",
+          "notitie": "'Vaste leveringskosten per dag' € 1,6438 incl. btw (€ 1,3585 excl.); × 365 / 12 = € 50,00 per maand."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.089,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonopnaam.nl/files/pdf/ZON_Tarievenblad_2026M10_Modelcontract_Vast_V01.pdf",
+          "notitie": "'De terugleververgoeding bedraagt in beide periodes € 0,089 per kWh' (tot en vanaf 1-1-2027). Het tariefblad zegt niet of hier btw in zit; het bedrag is overgenomen zoals het er staat."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.089,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.zonopnaam.nl/files/pdf/ZON_Tarievenblad_2026M10_Modelcontract_Vast_V01.pdf",
+          "notitie": "'De terugleverkosten zijn € 0,089 (incl. btw) per teruggeleverde kWh.' Geen apart bedrag voor of na 1-1-2027."
+        }
+      },
+      "notitie": "Voorheen Vrijopnaam. Tarievenblad van oktober 2026 (bestandsnaam 2026M10; geen datum in de tekst)."
+    },
+    {
+      "id": "energiek-modelcontract-1-jaar-vast",
+      "leverancier": "Energiek",
+      "leverancierId": "energiek",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.energiek.nl/modelcontract",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.1694,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.energiek.nl/api/products/11",
+          "notitie": "Product 'Vast 1 jaar' (ModVast-E-0926V2), de gegevens achter de tabel op de modelcontractpagina. tariffPurchase 0,1694 incl. btw (0,14 excl.), zonder energiebelasting; totaal 0,280248 = (0,14 + 0,09161) × 1,21."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 5.99,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.energiek.nl/api/products/11",
+          "notitie": "tariffFixedEnergy € 71,87 per jaar incl. btw (€ 59,40 excl.), op de pagina 'Vaste leveringskosten … per jaar'; / 12 = € 5,99 per maand."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.07,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.energiek.nl/api/products/11",
+          "notitie": "tariffReturnSingle 0,07; 'Op de terugleververgoeding is geen btw van toepassing.' Btw-vrij: dit bedrag krijgt de consument, dus niet met 21% btw verhoogd."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.0605,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.energiek.nl/api/products/11",
+          "notitie": "'Terugleveringskosten (indien van toepassing)' 0,0605 per kWh incl. btw (0,05 excl.). Geen apart bedrag voor of na 1-1-2027."
+        }
+      }
+    },
+    {
+      "id": "om-modelcontract-1-jaar-vast",
+      "leverancier": "OM | nieuwe energie",
+      "leverancierId": "om",
+      "naam": "Modelcontract 1 jaar vast",
+      "alleenModelcontract": false,
+      "looptijdMaanden": 12,
+      "tariefUrl": "https://www.samenom.nl/modelcontract/",
+      "geldigVanaf": "2026-10-01",
+      "tarieven": {
+        "stroomLeveringPerKwh": {
+          "waarde": 0.245084,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.samenom.nl/wp-content/uploads/tarieven/202610-consument-modelcontract-vast.pdf",
+          "notitie": "Enkel € 0,245084, energiebelasting € 0,110848 apart, totaal € 0,355932; 'inclusief 21% btw'. Normaal € 0,275217, laag € 0,224506."
+        },
+        "stroomVastPerMaand": {
+          "waarde": 10.71,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.samenom.nl/wp-content/uploads/tarieven/202610-consument-modelcontract-vast.pdf",
+          "notitie": "'De vaste leveringskosten voor gas en stroom bedragen ieder afzonderlijk € 0,352226 per dag'; × 365 / 12 = € 10,71 per maand."
+        },
+        "terugleververgoedingPerKwh": {
+          "waarde": 0.122543,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.samenom.nl/wp-content/uploads/tarieven/202610-consument-modelcontract-vast.pdf",
+          "notitie": "'Teruglevering enkeltarief € 0,122543' (normaal 0,137608, laag 0,112253). Het tariefblad noemt alle tarieven incl. btw; het bedrag is overgenomen zoals het er staat."
+        },
+        "terugleverkostenPerKwh": {
+          "waarde": 0.142,
+          "inclBtw": true,
+          "geverifieerd": true,
+          "gecontroleerdOp": "2026-10-09",
+          "bron": "https://www.samenom.nl/wp-content/uploads/tarieven/202610-consument-modelcontract-vast.pdf",
+          "notitie": "'Terugleverkosten € 0,142000' per kWh. De modelcontractpagina: 'Voor het modelcontract zullen we de terugleverkosten in rekening gaan brengen per kWh' (de staffel van OM hoort bij de andere contracten). Geen apart bedrag voor of na 1-1-2027."
+        }
+      },
+      "notitie": "Tariefblad 'Oktober 2026'."
     }
   ]
 }
