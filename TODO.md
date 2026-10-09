@@ -24,3 +24,14 @@ Nu vergelijkt het project alleen wat een leverancier rekent. Contracten verschil
 
 - **Mega**: de gastarieven (vaste kosten en opslag) ontbreken nog. De stroomwaarden zijn met de hand gelezen in de rekentool, want die zit achter een botcontrole. Ze moeten dus met de hand bijgehouden worden; de bot bewaakt de openbare pagina's en de productvoorwaarden van Mega en opent een issue als daar iets verandert. Een tariefwijziging die alleen in de rekentool zichtbaar is, ziet de bewaking niet.
 - **Zonopnaam**: de adapter (`src/rekentools/zonopnaam.ts`) leest het tarievenblad van de lopende maand. Op 2026-09-30 gaf www.zonopnaam.nl vanuit de ontwikkelomgeving een 503/TLS-fout; bij de eerste run van de bot (1 oktober) controleren of het ophalen daar werkt.
+
+## Vaste contracten (modelcontract 1 jaar vast)
+
+Nog niet opgenomen, omdat de tarieven niet controleerbaar op de eigen site staan (gezocht op 2026-10-09):
+
+- **Greenchoice**: biedt een vast modelcontract aan, maar publiceert alleen het tariefblad van het variabele modelcontract.
+- **Mega**: het tariefblad zegt niet of het om het vaste of variabele modelcontract gaat, is van 1 januari 2026 en staat op Amazon S3 (niet op mega.nl). De rekentool zit achter een botcontrole.
+- **United Consumers**: op de eigen site alleen een variabel modelcontract, zonder tarieven.
+- **Gulf Gas & Power**: het tariefblad vast is van 1 april 2026 en staat op Amazon S3, niet op gulfgasandpower.nl.
+- **Huismerk Energie**: de site was niet bereikbaar.
+- **Zonneplan**: de terugleverkosten (€ 0) staan alleen in de bevestigingsbrief op Amazon S3; daarom ontbreken ze.

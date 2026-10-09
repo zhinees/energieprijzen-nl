@@ -14,7 +14,7 @@ const EENHEID: Record<VastVeld, string> = {
 };
 /** Sanity ranges incl. btw: a number outside is almost certainly a typo (cents, or energy tax included). */
 const BEREIK: Record<VastVeld, [number, number]> = {
-  stroomLeveringPerKwh: [0.03, 0.5], stroomVastPerMaand: [0, 30], terugleververgoedingPerKwh: [-0.2, 0.3], terugleverkostenPerKwh: [0, 0.4],
+  stroomLeveringPerKwh: [0.03, 0.5], stroomVastPerMaand: [0, 60], terugleververgoedingPerKwh: [-0.2, 0.3], terugleverkostenPerKwh: [0, 0.4],
 };
 
 export type VastContractConfig = {
