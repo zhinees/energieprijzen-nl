@@ -79,10 +79,6 @@ const batterijCfg = join(ROOT, "thuisbatterijen", "thuisbatterijen.json");
 await controleer("thuisbatterijen-config.schema.json", batterijCfg);
 const batterijen = await leesJson<ThuisbatterijenConfig>(batterijCfg);
 if (batterijen && batterijen.gecontroleerdOp > new Date().toISOString().slice(0, 10)) fout("thuisbatterijen/thuisbatterijen.json", "gecontroleerdOp ligt in de toekomst");
-const modellenCfg = join(ROOT, "thuisbatterijen", "modellen.json");
-await controleer("batterijmodellen-config.schema.json", modellenCfg);
-const modellen = await leesJson<{ gecontroleerdOp: string }>(modellenCfg);
-if (modellen && modellen.gecontroleerdOp > new Date().toISOString().slice(0, 10)) fout("thuisbatterijen/modellen.json", "gecontroleerdOp ligt in de toekomst");
 
 // 4b. Home charging config (ERE payment, home charger price)
 const ladenCfg = join(ROOT, "laden", "laden.json");
@@ -118,7 +114,7 @@ await controleer("omslagpunten.schema.json", join(DATA, "omslagpunten.json"));
 await controleer("netbeheer.schema.json", join(DATA, "netbeheer.json"));
 await controleer("netbeheer-postcodes.schema.json", join(DATA, "netbeheer-postcodes.json"));
 await controleer("thuisbatterijen.schema.json", join(DATA, "thuisbatterijen.json"));
-await controleer("batterijmodellen.schema.json", join(DATA, "batterijmodellen.json"));
+await controleer("batterijmodellen.schema.json", join(DATA, "batterijmodellen.json")); // bevroren, alleen voor bestaande gebruikers
 await controleer("laden.schema.json", join(DATA, "laden.json"));
 await controleer("prijsstijging.schema.json", join(DATA, "prijsstijging.json"));
 await controleer("zonnepanelen.schema.json", join(DATA, "zonnepanelen.json"));
@@ -131,4 +127,4 @@ if (fouten) {
   console.error(`\n${fouten} probleem/problemen`);
   process.exit(1);
 }
-console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, de batterijmodellen, thuis laden, de prijsstijging, de prijs van zonnepanelen, het gemiddelde vaste contract (stroom en gas), de pompprijzen, de vaste contracten en de databestanden zijn geldig`);
+console.log(`✓ ${configs.length} leveranciersbestanden, het energiebelastingbestand, de netbeheertarieven, de batterijprijzen, thuis laden, de prijsstijging, de prijs van zonnepanelen, het gemiddelde vaste contract (stroom en gas), de pompprijzen, de vaste contracten en de databestanden zijn geldig`);
