@@ -7,7 +7,7 @@ const w = (waarde: number, inclBtw = true): HandWaarde => ({ waarde, inclBtw, ge
 const cfg = (): VasteContractenConfig => ({
   gecontroleerdOp: "2026-10-02",
   contracten: [{
-    id: "voorbeeld-vast-1j", leverancier: "Voorbeeld", leverancierId: "voorbeeld", naam: "Vast 1 jaar", looptijdMaanden: 12,
+    id: "voorbeeld-vast-1j", leverancier: "Voorbeeld", leverancierId: "voorbeeld", naam: "Vast 1 jaar", alleenModelcontract: false, looptijdMaanden: 12,
     tariefUrl: "https://www.voorbeeld.nl/vast",
     tarieven: { stroomLeveringPerKwh: w(0.1), stroomVastPerMaand: w(6), terugleververgoedingPerKwh: w(0.02) },
     terugleverStaffels: {
@@ -23,6 +23,7 @@ test("zet bedragen om naar incl. en excl. btw, met eenheid, bron en staffel", ()
   assert.equal(b.gegenereerdOp, NU);
   const c = b.contracten[0];
   assert.deepEqual(c.tarieven.stroomLeveringPerKwh, { bedragInclBtw: 0.1, bedragExclBtw: 0.082645, eenheid: "EUR/kWh", bronUrl: "https://www.voorbeeld.nl/tarieven", gecontroleerdOp: "2026-10-02" });
+  assert.equal(c.alleenModelcontract, false);
   assert.equal(c.tarieven.stroomVastPerMaand?.eenheid, "EUR/maand");
   assert.equal(c.tarieven.terugleverkostenPerKwh, undefined);
   assert.deepEqual(c.terugleverStaffels?.map((s) => [s.totKwh, s.perMaand.bedragInclBtw]), [[1000, 0], [2500, 7.5], [null, 15]]);

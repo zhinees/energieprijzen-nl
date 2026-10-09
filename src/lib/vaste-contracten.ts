@@ -23,6 +23,8 @@ export type VastContractConfig = {
   /** Id in leveranciers/ when the supplier is also there (its website is then checked against the sources). */
   leverancierId?: string;
   naam: string;
+  /** true when the supplier sells no fixed contract of its own: it publishes this model contract only because it must. */
+  alleenModelcontract: boolean;
   looptijdMaanden: number | null;
   tariefUrl: string;
   /** Postcode used in the supplier's calculator, when the tariffs depend on it. */
