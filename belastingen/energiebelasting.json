@@ -11,6 +11,15 @@
       "gecontroleerdOp": "2026-09-24",
       "bron": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/overige_belastingen/belastingen_op_milieugrondslag/energiebelasting/energiebelasting",
       "notitie": "Tabellen 'Belasting op elektriciteit' (0 t/m 2.900 en 2.901 t/m 10.000 kWh: € 0,09161), 'Belasting op aardgas (normaal tarief)' (0 tot 1.000 en 1.001 t/m 170.000 m3: € 0,60066) en 'Belastingvermindering per elektriciteitsaansluiting' (verblijfsfunctie: € 519,80). Bedragen excl. btw."
+    },
+    "2027": {
+      "stroomPerKwh": 0.08802,
+      "gasPerM3": 0.61628,
+      "verminderingPerAansluitingPerJaar": 519.58,
+      "geverifieerd": true,
+      "gecontroleerdOp": "2026-10-12",
+      "bron": "https://www.rijksfinancien.nl/sites/default/files/bestanden/belastingplan-2027/pakket-belastingplan-2027/Fiscale-sleuteltabel-2027-incl-correctie-tarieven-energiebelasting-zelfstandigenaftrek.pdf",
+      "notitie": "Voorstel uit het Belastingplan 2027 (Prinsjesdag 15-09-2026), nog niet door de Kamers. Fiscale sleuteltabel 2027, gecorrigeerde versie (de eerste versie had per abuis verkeerde tarieven): elektriciteit 0-2.900 en 2.900-10.000 kWh 8,80 ct, aardgas 0-1.000 en 1.000-170.000 m3 61,63 ct, belastingvermindering per aansluiting € 519,58. Op vijf decimalen (€ 0,08802 en € 0,61628) zoals ENGIE ze publiceert, gelijk aan de sleuteltabel afgerond. Bedragen excl. btw. Zodra de Belastingdienst 2027 in zijn tabellen zet, neemt de bot die waarden over."
     }
   }
 }

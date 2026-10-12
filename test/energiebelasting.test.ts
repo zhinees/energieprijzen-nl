@@ -48,8 +48,15 @@ test("als de pagina niet te lezen is, blijven de laatst gelezen waarden staan en
 
 test("zonder eerdere gegevens valt het terug op de handmatige waarden", () => {
   const b = bouwEnergiebelasting(cfg, undefined, undefined, "2026-09-24T04:17:00Z", "HTTP 503");
-  assert.deepEqual(Object.keys(b.jaren), ["2026"]);
+  assert.deepEqual(Object.keys(b.jaren), ["2026", "2027"]);
   assert.equal(b.jaren["2026"].bron, "handmatig");
+});
+
+test("een jaar dat de Belastingdienst nog niet noemt (2027, uit het Belastingplan) blijft handmatig staan", () => {
+  const b = bouwEnergiebelasting(cfg, leesEnergiebelasting(pagina), undefined, "2026-10-12T04:17:00Z");
+  assert.equal(b.jaren["2026"].bron, "website");
+  assert.equal(b.jaren["2027"].bron, "handmatig");
+  assert.deepEqual(b.jaren["2027"].stroomPerKwh, { bedragInclBtw: 0.106504, bedragExclBtw: 0.08802 });
 });
 
 test("'sinds' blijft staan zolang de tarieven niet veranderen", () => {

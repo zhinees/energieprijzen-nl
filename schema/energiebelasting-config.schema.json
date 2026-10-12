@@ -54,7 +54,7 @@
           },
           "geverifieerd": {
             "const": true,
-            "description": "Moet true zijn: gelezen op de site van de Belastingdienst op gecontroleerdOp."
+            "description": "Moet true zijn: gelezen op gecontroleerdOp op de site van de Belastingdienst, of voor een jaar dat daar nog niet staat in een officieel stuk van het Rijk (zoals de fiscale sleuteltabel bij het Belastingplan)."
           },
           "gecontroleerdOp": {
             "type": "string",
