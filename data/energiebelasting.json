@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/energiebelasting.schema.json",
   "versie": 1,
-  "gegenereerdOp": "2026-10-02T10:29:27.952Z",
+  "gegenereerdOp": "2026-10-12T07:14:55.415Z",
   "valuta": "EUR",
   "jaren": {
     "2023": {
@@ -79,6 +79,24 @@
       "geverifieerd": true,
       "sinds": "2026-09-24T19:46:48.677Z",
       "laatstGecontroleerd": "2026-10-02T10:29:27.952Z"
+    },
+    "2027": {
+      "stroomPerKwh": {
+        "bedragInclBtw": 0.106504,
+        "bedragExclBtw": 0.08802
+      },
+      "gasPerM3": {
+        "bedragInclBtw": 0.745699,
+        "bedragExclBtw": 0.61628
+      },
+      "verminderingPerAansluitingPerJaar": {
+        "bedragInclBtw": 628.6918,
+        "bedragExclBtw": 519.58
+      },
+      "bron": "handmatig",
+      "bronUrl": "https://www.rijksfinancien.nl/sites/default/files/bestanden/belastingplan-2027/pakket-belastingplan-2027/Fiscale-sleuteltabel-2027-incl-correctie-tarieven-energiebelasting-zelfstandigenaftrek.pdf",
+      "geverifieerd": true,
+      "sinds": "2026-10-12T00:00:00Z"
     }
   }
 }
