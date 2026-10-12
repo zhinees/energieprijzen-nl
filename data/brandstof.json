@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-10-06T11:41:27.853Z",
+  "gegenereerdOp": "2026-10-12T12:04:27.434Z",
   "valuta": "EUR",
   "inclBtw": true,
   "omschrijving": "Gemiddelde pompprijs van benzine (Euro95) en diesel in Nederland (CBS), per liter, incl. btw en accijns: het gemiddelde van de laatste 30 dagen en per maand.",
@@ -10,13 +10,67 @@
     "licentie": "CC BY 4.0"
   },
   "laatste": {
-    "van": "2026-08-30",
-    "tot": "2026-09-28",
+    "van": "2026-09-06",
+    "tot": "2026-10-05",
     "dagen": 30,
-    "benzinePerLiter": 2.441,
-    "dieselPerLiter": 2.486
+    "benzinePerLiter": 2.448,
+    "dieselPerLiter": 2.515
   },
   "maanden": [
+    {
+      "maand": "2025-11",
+      "dagen": 30,
+      "benzinePerLiter": 1.956,
+      "dieselPerLiter": 1.769
+    },
+    {
+      "maand": "2025-12",
+      "dagen": 31,
+      "benzinePerLiter": 1.91,
+      "dieselPerLiter": 1.705
+    },
+    {
+      "maand": "2026-01",
+      "dagen": 31,
+      "benzinePerLiter": 2.014,
+      "dieselPerLiter": 1.801
+    },
+    {
+      "maand": "2026-02",
+      "dagen": 28,
+      "benzinePerLiter": 2.039,
+      "dieselPerLiter": 1.834
+    },
+    {
+      "maand": "2026-03",
+      "dagen": 31,
+      "benzinePerLiter": 2.249,
+      "dieselPerLiter": 2.294
+    },
+    {
+      "maand": "2026-04",
+      "dagen": 30,
+      "benzinePerLiter": 2.323,
+      "dieselPerLiter": 2.412
+    },
+    {
+      "maand": "2026-05",
+      "dagen": 31,
+      "benzinePerLiter": 2.378,
+      "dieselPerLiter": 2.282
+    },
+    {
+      "maand": "2026-06",
+      "dagen": 30,
+      "benzinePerLiter": 2.232,
+      "dieselPerLiter": 2.083
+    },
+    {
+      "maand": "2026-07",
+      "dagen": 31,
+      "benzinePerLiter": 2.315,
+      "dieselPerLiter": 2.231
+    },
     {
       "maand": "2026-08",
       "dagen": 31,
@@ -25,9 +79,15 @@
     },
     {
       "maand": "2026-09",
-      "dagen": 28,
+      "dagen": 30,
       "benzinePerLiter": 2.448,
-      "dieselPerLiter": 2.497
+      "dieselPerLiter": 2.499
+    },
+    {
+      "maand": "2026-10",
+      "dagen": 5,
+      "benzinePerLiter": 2.431,
+      "dieselPerLiter": 2.509
     }
   ]
 }
