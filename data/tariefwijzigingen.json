@@ -70,5 +70,13 @@
     "vanInclBtw": 5.99,
     "naarInclBtw": 9.99,
     "bron": "rekentool"
+  },
+  {
+    "datum": "2026-10-19",
+    "leverancier": "budget",
+    "veld": "stroomVastPerMaand",
+    "vanInclBtw": 9.99,
+    "naarInclBtw": 5.99,
+    "bron": "rekentool"
   }
 ]

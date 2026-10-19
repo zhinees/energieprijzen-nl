@@ -1,6 +1,6 @@
 # Omslagpunten
 
-Berekend op 2026-10-12 uit [`leveranciers.json`](leveranciers.json), bij elke nieuwe tariefwijziging opnieuw. Alle bedragen zijn inclusief btw.
+Berekend op 2026-10-19 uit [`leveranciers.json`](leveranciers.json), bij elke nieuwe tariefwijziging opnieuw. Alle bedragen zijn inclusief btw.
 
 Alleen het deel van de rekening dat per leverancier verschilt telt mee: **vaste kosten × 12 + verbruik × inkoopopslag** (met zonnepanelen ook **− teruglevering × terugleverCorrectie**, zie onderaan). Marktprijs, energiebelasting en netbeheerkosten zijn bij iedereen gelijk en veranderen een omslagpunt dus niet. Leveranciers die hun vaste kosten of opslag niet publiceren, tellen niet mee.
 
@@ -8,9 +8,9 @@ Reken je eigen situatie door met `npm run rekenhulp -- --stroom 2500 --gas 1000`
 
 ## Stroom
 
-- Vaste kosten: € 71,87 – € 119,88 per jaar (verschil € 48,01)
+- Vaste kosten: € 71,87 – € 102,85 per jaar (verschil € 30,98)
 - Inkoopopslag: € 0,0100 – € 0,0253 per kWh (verschil € 0,0153)
-- **Omslagpunt: 3.142 kWh per jaar** (was 2.027 kWh op 2026-09-30). Onder dit verbruik wegen de verschillen in vaste kosten zwaarder, erboven de verschillen in opslag.
+- **Omslagpunt: 2.027 kWh per jaar** (was 3.142 kWh op 2026-10-12). Onder dit verbruik wegen de verschillen in vaste kosten zwaarder, erboven de verschillen in opslag.
 
 Goedkoopste leverancier per jaarverbruik:
 
@@ -25,6 +25,7 @@ Omslagpunt per paar (onder het omslagpunt is de eerste goedkoper, erboven de twe
 | Lagere vaste kosten | Lagere opslag | Omslagpunt (kWh/jaar) |
 | --- | --- | --- |
 | Energiek | Vattenfall (FlexPrijs) | 3 |
+| Energiek | Budget Thuis (Budget Energie) | 8 |
 | Vandebron | Frank Energie | 15 |
 | Essent | EnergyZero | 42 |
 | Essent | Greenchoice | 42 |
@@ -37,13 +38,13 @@ Omslagpunt per paar (onder het omslagpunt is de eerste goedkoper, erboven de twe
 | Mega | Powerpeers | 294 |
 | Pure Energie | Powerpeers | 300 |
 | Energiek | Powerpeers | 390 |
+| Budget Thuis (Budget Energie) | Powerpeers | 457 |
 | Live Energy | Zonneplan | 571 |
 | Vattenfall (FlexPrijs) | Powerpeers | 625 |
 | Essent | Zonopnaam Energie | 1.150 |
 | Essent | ANWB Energie | 1.665 |
 | Live Energy | Tibber | 1.819 |
 | Live Energy | Frank Energie | 1.884 |
-| OM | nieuwe energie | Budget Thuis (Budget Energie) | 2.082 |
 | EnergyZero | Zonopnaam Energie | 2.440 |
 | Greenchoice | Zonopnaam Energie | 2.440 |
 | EnergyZero | ANWB Energie | 2.715 |
@@ -51,7 +52,6 @@ Omslagpunt per paar (onder het omslagpunt is de eerste goedkoper, erboven de twe
 | Live Energy | Energiedirect | 3.049 |
 | Zonopnaam Energie | ANWB Energie | 3.059 |
 | NextEnergy | Zonneplan | 3.120 |
-| Essent | Budget Thuis (Budget Energie) | 3.546 |
 | Eneco | ANWB Energie | 3.622 |
 | Eneco | Zonopnaam Energie | 3.990 |
 | NextEnergy | Tibber | 4.000 |
@@ -62,38 +62,22 @@ Omslagpunt per paar (onder het omslagpunt is de eerste goedkoper, erboven de twe
 | Live Energy | ANWB Energie | 4.742 |
 | easyEnergy | ANWB Energie | 4.762 |
 | Zonneplan | Frank Energie | 4.865 |
-| EnergyZero | Budget Thuis (Budget Energie) | 5.336 |
-| Greenchoice | Budget Thuis (Budget Energie) | 5.336 |
 | Live Energy | Vandebron | 5.349 |
 | Live Energy | Zonopnaam Energie | 5.523 |
 | Vandebron | Zonopnaam Energie | 5.697 |
-| Eneco | Budget Thuis (Budget Energie) | 5.834 |
-| Live Energy | Budget Thuis (Budget Energie) | 6.407 |
 | easyEnergy | Zonopnaam Energie | 6.606 |
-| Vandebron | Budget Thuis (Budget Energie) | 6.833 |
-| easyEnergy | Budget Thuis (Budget Energie) | 7.234 |
 | Energiedirect | ANWB Energie | 7.248 |
-| Zonopnaam Energie | Budget Thuis (Budget Energie) | 7.596 |
 | Live Energy | Eneco | 9.268 |
 | Live Energy | EnergyZero | 9.775 |
 | Live Energy | Greenchoice | 9.775 |
-| Energiedirect | Budget Thuis (Budget Energie) | 9.783 |
 | NextEnergy | ANWB Energie | 10.040 |
 | Eneco | EnergyZero | 10.909 |
 | Eneco | Greenchoice | 10.909 |
-| NextEnergy | Budget Thuis (Budget Energie) | 11.483 |
 | Zonneplan | ANWB Energie | 13.500 |
-| Zonneplan | Budget Thuis (Budget Energie) | 14.113 |
-| ANWB Energie | Budget Thuis (Budget Energie) | 15.153 |
 | Energiek | Pure Energie | 18.718 |
 | Energiedirect | Zonopnaam Energie | 22.636 |
 | NextEnergy | Zonopnaam Energie | 23.295 |
 | NextEnergy | Energiedirect | 24.000 |
-| Frank Energie | Budget Thuis (Budget Energie) | 26.977 |
-| Tibber | Budget Thuis (Budget Energie) | 30.508 |
-| Mega | Budget Thuis (Budget Energie) | 35.549 |
-| Energiek | Budget Thuis (Budget Energie) | 39.711 |
-| Pure Energie | Budget Thuis (Budget Energie) | 40.410 |
 | Essent | OM | nieuwe energie | 46.321 |
 | Mega | Tibber | 75.200 |
 | Frank Energie | ANWB Energie | 120.000 |
@@ -201,7 +185,7 @@ Omslagpunt per paar (onder het omslagpunt is de eerste goedkoper, erboven de twe
 Met zonnepanelen telt ook de `terugleverCorrectie` mee: per jaar betaal je *teruglevering × correctie* (negatief = kosten, positief = bonus). Bij een vaste hoeveelheid teruglevering werkt dat als een extra vast bedrag per jaar, dus het verschuift de omslagpunten van stroom.
 
 - terugleverCorrectie: € -0,0303 – € 0,0200 per kWh (verschil € 0,0503)
-- **Omslagpunt: 955 kWh teruglevering per jaar** (was 616 kWh op 2026-09-30). Lever je meer terug, dan wegen de verschillen in terugleverCorrectie zwaarder dan de verschillen in vaste kosten.
+- **Omslagpunt: 616 kWh teruglevering per jaar** (was 955 kWh op 2026-10-12). Lever je meer terug, dan wegen de verschillen in terugleverCorrectie zwaarder dan de verschillen in vaste kosten.
 
 Goedkoopste stroomleverancier per verbruik, bij deze hoeveelheden teruglevering:
 
@@ -218,6 +202,7 @@ Goedkoopste stroomleverancier per verbruik, bij deze hoeveelheden teruglevering:
 
 | Datum | Omslagpunt stroom | Omslagpunt gas | Omslagpunt teruglevering |
 | --- | --- | --- | --- |
+| 2026-10-19 | 2.027 kWh | 731 m³ | 616 kWh |
 | 2026-10-12 | 3.142 kWh | 731 m³ | 955 kWh |
 | 2026-09-30 | 2.027 kWh | 731 m³ | 616 kWh |
 | 2026-09-26 | 3.297 kWh | 1.005 m³ | 687 kWh |

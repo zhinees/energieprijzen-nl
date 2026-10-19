@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-10-12T12:04:26.750Z",
+  "gegenereerdOp": "2026-10-19T09:57:45.277Z",
   "valuta": "EUR",
   "inclBtw": true,
   "omschrijving": "Gemiddeld vast of variabel stroomcontract voor huishoudens (CBS), per kWh en per jaar, incl. btw. Het leveringstarief is zonder energiebelasting; totaalPerKwh telt de energiebelasting van die maand erbij.",
@@ -10,22 +10,14 @@
     "licentie": "CC BY 4.0"
   },
   "laatste": {
-    "maand": "2026-08",
-    "leveringPerKwh": 0.1469,
+    "maand": "2026-09",
+    "leveringPerKwh": 0.1487,
     "energiebelastingPerKwh": 0.1109,
-    "totaalPerKwh": 0.2578,
-    "vastPerJaar": 114.63,
-    "vastPerMaand": 9.55
+    "totaalPerKwh": 0.2596,
+    "vastPerJaar": 115.23,
+    "vastPerMaand": 9.6
   },
   "maanden": [
-    {
-      "maand": "2025-09",
-      "leveringPerKwh": 0.1485,
-      "energiebelastingPerKwh": 0.1229,
-      "totaalPerKwh": 0.2714,
-      "vastPerJaar": 108.68,
-      "vastPerMaand": 9.06
-    },
     {
       "maand": "2025-10",
       "leveringPerKwh": 0.1514,
@@ -113,6 +105,14 @@
       "totaalPerKwh": 0.2578,
       "vastPerJaar": 114.63,
       "vastPerMaand": 9.55
+    },
+    {
+      "maand": "2026-09",
+      "leveringPerKwh": 0.1487,
+      "energiebelastingPerKwh": 0.1109,
+      "totaalPerKwh": 0.2596,
+      "vastPerJaar": 115.23,
+      "vastPerMaand": 9.6
     }
   ]
 }
