@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/omslagpunten.schema.json",
   "versie": 1,
-  "gegenereerdOp": "2026-10-19T09:58:15.866Z",
+  "gegenereerdOp": "2026-10-26T10:12:08.498Z",
   "valuta": "EUR",
   "btw": "inclusief",
   "uitleg": "Alleen het deel dat per leverancier verschilt: vaste kosten x 12 + verbruik x inkoopopslag - teruglevering x terugleverCorrectie, incl. btw. Omslagpunten zijn in kWh (stroom, teruglevering) of m3 (gas) per jaar.",
