@@ -1,7 +1,7 @@
 {
   "$schema": "../schema/omslagpunten.schema.json",
   "versie": 1,
-  "gegenereerdOp": "2026-11-09T12:56:49.187Z",
+  "gegenereerdOp": "2026-11-16T12:50:05.829Z",
   "valuta": "EUR",
   "btw": "inclusief",
   "uitleg": "Alleen het deel dat per leverancier verschilt: vaste kosten x 12 + verbruik x inkoopopslag - teruglevering x terugleverCorrectie, incl. btw. Omslagpunten zijn in kWh (stroom, teruglevering) of m3 (gas) per jaar.",
@@ -130,7 +130,7 @@
       {
         "lageVasteKosten": "essent",
         "lageOpslag": "anwb",
-        "omslagpunt": 1665
+        "omslagpunt": 1681
       },
       {
         "lageVasteKosten": "liveenergy",
@@ -155,12 +155,12 @@
       {
         "lageVasteKosten": "energyzero",
         "lageOpslag": "anwb",
-        "omslagpunt": 2715
+        "omslagpunt": 2742
       },
       {
         "lageVasteKosten": "greenchoice",
         "lageOpslag": "anwb",
-        "omslagpunt": 2715
+        "omslagpunt": 2742
       },
       {
         "lageVasteKosten": "liveenergy",
@@ -168,19 +168,19 @@
         "omslagpunt": 3049
       },
       {
-        "lageVasteKosten": "zonopnaam",
-        "lageOpslag": "anwb",
-        "omslagpunt": 3059
-      },
-      {
         "lageVasteKosten": "nextenergy",
         "lageOpslag": "zonneplan",
         "omslagpunt": 3120
       },
       {
+        "lageVasteKosten": "zonopnaam",
+        "lageOpslag": "anwb",
+        "omslagpunt": 3120
+      },
+      {
         "lageVasteKosten": "eneco",
         "lageOpslag": "anwb",
-        "omslagpunt": 3622
+        "omslagpunt": 3646
       },
       {
         "lageVasteKosten": "eneco",
@@ -198,14 +198,14 @@
         "omslagpunt": 4253
       },
       {
-        "lageVasteKosten": "vandebron",
-        "lageOpslag": "anwb",
-        "omslagpunt": 4426
-      },
-      {
         "lageVasteKosten": "zonneplan",
         "lageOpslag": "tibber",
         "omslagpunt": 4440
+      },
+      {
+        "lageVasteKosten": "vandebron",
+        "lageOpslag": "anwb",
+        "omslagpunt": 4456
       },
       {
         "lageVasteKosten": "liveenergy",
@@ -215,12 +215,12 @@
       {
         "lageVasteKosten": "liveenergy",
         "lageOpslag": "anwb",
-        "omslagpunt": 4742
+        "omslagpunt": 4761
       },
       {
         "lageVasteKosten": "easyenergy",
         "lageOpslag": "anwb",
-        "omslagpunt": 4762
+        "omslagpunt": 4794
       },
       {
         "lageVasteKosten": "zonneplan",
@@ -250,7 +250,7 @@
       {
         "lageVasteKosten": "energiedirect",
         "lageOpslag": "anwb",
-        "omslagpunt": 7248
+        "omslagpunt": 7296
       },
       {
         "lageVasteKosten": "liveenergy",
@@ -270,7 +270,7 @@
       {
         "lageVasteKosten": "nextenergy",
         "lageOpslag": "anwb",
-        "omslagpunt": 10040
+        "omslagpunt": 10080
       },
       {
         "lageVasteKosten": "eneco",
@@ -285,7 +285,7 @@
       {
         "lageVasteKosten": "zonneplan",
         "lageOpslag": "anwb",
-        "omslagpunt": 13500
+        "omslagpunt": 13560
       },
       {
         "lageVasteKosten": "energiek",
@@ -320,12 +320,12 @@
       {
         "lageVasteKosten": "frank",
         "lageOpslag": "anwb",
-        "omslagpunt": 120000
+        "omslagpunt": 120800
       },
       {
         "lageVasteKosten": "mega",
         "lageOpslag": "anwb",
-        "omslagpunt": 196000
+        "omslagpunt": 196800
       },
       {
         "lageVasteKosten": "energiek",
@@ -340,7 +340,7 @@
       {
         "lageVasteKosten": "energiek",
         "lageOpslag": "anwb",
-        "omslagpunt": 1038966
+        "omslagpunt": 1043103
       }
     ]
   },

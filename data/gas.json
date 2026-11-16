@@ -1,5 +1,5 @@
 {
-  "gegenereerdOp": "2026-11-09T12:56:16.161Z",
+  "gegenereerdOp": "2026-11-16T12:49:31.677Z",
   "valuta": "EUR",
   "inclBtw": true,
   "omschrijving": "Gemiddeld vast of variabel gascontract voor huishoudens (CBS), per m³ en per jaar, incl. btw. Het leveringstarief is zonder energiebelasting; totaalPerM3 telt de energiebelasting van die maand erbij. netbeheerPerJaar is het transporttarief van de netbeheerder voor gas.",
@@ -10,22 +10,14 @@
     "licentie": "CC BY 4.0"
   },
   "laatste": {
-    "maand": "2026-09",
-    "leveringPerM3": 0.6618,
+    "maand": "2026-10",
+    "leveringPerM3": 0.6965,
     "energiebelastingPerM3": 0.7268,
-    "totaalPerM3": 1.3886,
-    "vastPerJaar": 93.05,
+    "totaalPerM3": 1.4233,
+    "vastPerJaar": 93.13,
     "netbeheerPerJaar": 268.37
   },
   "maanden": [
-    {
-      "maand": "2025-10",
-      "leveringPerM3": 0.6126,
-      "energiebelastingPerM3": 0.6996,
-      "totaalPerM3": 1.3122,
-      "vastPerJaar": 91.36,
-      "netbeheerPerJaar": 247.55
-    },
     {
       "maand": "2025-11",
       "leveringPerM3": 0.6058,
@@ -112,6 +104,14 @@
       "energiebelastingPerM3": 0.7268,
       "totaalPerM3": 1.3886,
       "vastPerJaar": 93.05,
+      "netbeheerPerJaar": 268.37
+    },
+    {
+      "maand": "2026-10",
+      "leveringPerM3": 0.6965,
+      "energiebelastingPerM3": 0.7268,
+      "totaalPerM3": 1.4233,
+      "vastPerJaar": 93.13,
       "netbeheerPerJaar": 268.37
     }
   ]
