@@ -229,5 +229,46 @@
     "teruglevering": {
       "omslagpunt": 616
     }
+  },
+  {
+    "datum": "2026-11-23",
+    "stroom": {
+      "omslagpunt": 2027,
+      "goedkoopste": [
+        {
+          "vanaf": 0,
+          "tot": 3,
+          "id": "energiek"
+        },
+        {
+          "vanaf": 3,
+          "tot": 625,
+          "id": "vattenfall"
+        },
+        {
+          "vanaf": 625,
+          "tot": null,
+          "id": "powerpeers"
+        }
+      ]
+    },
+    "gas": {
+      "omslagpunt": 733,
+      "goedkoopste": [
+        {
+          "vanaf": 0,
+          "tot": 399,
+          "id": "energiedirect"
+        },
+        {
+          "vanaf": 399,
+          "tot": null,
+          "id": "energiek"
+        }
+      ]
+    },
+    "teruglevering": {
+      "omslagpunt": 616
+    }
   }
 ]

@@ -86,5 +86,37 @@
     "vanInclBtw": 8.5,
     "naarInclBtw": 8.51,
     "bron": "rekentool"
+  },
+  {
+    "datum": "2026-11-23",
+    "leverancier": "anwb",
+    "veld": "stroomVastPerMaand",
+    "vanInclBtw": 8.51,
+    "naarInclBtw": 8.52,
+    "bron": "rekentool"
+  },
+  {
+    "datum": "2026-11-23",
+    "leverancier": "vandebron",
+    "veld": "stroomInkoopopslag",
+    "vanInclBtw": 0.02208,
+    "naarInclBtw": 0.015,
+    "bron": "rekentool"
+  },
+  {
+    "datum": "2026-11-23",
+    "leverancier": "vandebron",
+    "veld": "gasInkoopopslag",
+    "vanInclBtw": 0.05983,
+    "naarInclBtw": 0.09206,
+    "bron": "rekentool"
+  },
+  {
+    "datum": "2026-11-23",
+    "leverancier": "vandebron",
+    "veld": "terugleverCorrectie",
+    "vanInclBtw": -0.01361,
+    "naarInclBtw": -0.02133,
+    "bron": "rekentool"
   }
 ]
